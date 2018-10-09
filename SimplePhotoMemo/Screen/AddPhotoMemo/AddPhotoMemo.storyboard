@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,25 +19,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc0-fe-niL">
-                                <rect key="frame" x="185" y="301" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="tappedAddImageButton:" destination="ilE-xj-Gn0" eventType="touchUpInside" id="1mC-At-3AZ"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uHj-2I-hUD">
-                                <rect key="frame" x="29" y="124" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NyM-4Q-Brs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U7-ka-kek">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="340.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHj-2I-hUD">
+                                                <rect key="frame" x="10" y="10" width="355" height="320.5"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc0-fe-niL">
+                                                <rect key="frame" x="164" y="222" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="tappedAddImageButton:" destination="ilE-xj-Gn0" eventType="touchUpInside" id="1mC-At-3AZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uHj-2I-hUD" secondAttribute="trailing" constant="10" id="AUT-wl-QZj"/>
+                                            <constraint firstItem="uHj-2I-hUD" firstAttribute="top" secondItem="8U7-ka-kek" secondAttribute="top" constant="10" id="C8E-bW-pZp"/>
+                                            <constraint firstAttribute="bottom" secondItem="uHj-2I-hUD" secondAttribute="bottom" constant="10" id="h2G-Zi-md0"/>
+                                            <constraint firstItem="uHj-2I-hUD" firstAttribute="leading" secondItem="8U7-ka-kek" secondAttribute="leading" constant="10" id="ssf-8z-7xM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EyT-kq-yBb">
+                                        <rect key="frame" x="0.0" y="340.5" width="375" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFR-jZ-QnJ">
+                                                <rect key="frame" x="16" y="5" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Tag"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSc-8c-gpM">
+                                                <rect key="frame" x="73" y="5" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="⭐"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qcm-Hs-VrZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3P-fR-qhC">
+                                        <rect key="frame" x="0.0" y="380.5" width="375" height="222.5"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SEQ-Jt-lNj">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SEQ-Jt-lNj" firstAttribute="leading" secondItem="Z3P-fR-qhC" secondAttribute="leading" id="B7D-8z-Hef"/>
+                                            <constraint firstItem="SEQ-Jt-lNj" firstAttribute="top" secondItem="Z3P-fR-qhC" secondAttribute="top" id="Cu8-nh-vTX"/>
+                                            <constraint firstAttribute="bottom" secondItem="SEQ-Jt-lNj" secondAttribute="bottom" id="an5-zL-WyB"/>
+                                            <constraint firstAttribute="trailing" secondItem="SEQ-Jt-lNj" secondAttribute="trailing" id="waQ-kJ-cW8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z3P-fR-qhC" firstAttribute="height" secondItem="Q1H-cK-JWi" secondAttribute="height" multiplier="1:3" id="AjF-ni-Jnq"/>
+                            <constraint firstItem="NyM-4Q-Brs" firstAttribute="top" secondItem="UHh-F6-h1F" secondAttribute="top" id="BiZ-XU-bpU"/>
+                            <constraint firstItem="UHh-F6-h1F" firstAttribute="trailing" secondItem="NyM-4Q-Brs" secondAttribute="trailing" id="a50-4K-SI1"/>
+                            <constraint firstItem="NyM-4Q-Brs" firstAttribute="leading" secondItem="UHh-F6-h1F" secondAttribute="leading" id="amJ-t2-kQW"/>
+                            <constraint firstItem="UHh-F6-h1F" firstAttribute="bottom" secondItem="NyM-4Q-Brs" secondAttribute="bottom" id="c3e-io-3TW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UHh-F6-h1F"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oye-lg-BUS"/>
+                    <navigationItem key="navigationItem" id="oye-lg-BUS">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lDe-9O-Srl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CeD-bo-WtI">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="送信"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sendImageView" destination="uHj-2I-hUD" id="ugh-Oi-rGv"/>
+                        <outlet property="stackViewBottom" destination="c3e-io-3TW" id="TLC-Ic-UP5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMO-Nm-IUO" userLabel="First Responder" sceneMemberID="firstResponder"/>

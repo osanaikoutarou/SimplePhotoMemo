@@ -11,12 +11,23 @@ import UIKit
 class AddPhotoMemoViewController: UIViewController {
 
     @IBOutlet weak var sendImageView: UIImageView!
+    @IBOutlet weak var stackViewBottom: NSLayoutConstraint!
     var imagePickerDelegateController = ImagePickerDelegateController()
+    var keyboardController = KeyboardController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         addCloseButton()
+        keyboardController.setup(constraints: [stackViewBottom])
+        keyboardController.setupKeyboardNotification()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedView))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func tappedView() {
+        self.view.endEditing(true)
     }
     
     @IBAction func tappedAddImageButton(_ sender: Any) {

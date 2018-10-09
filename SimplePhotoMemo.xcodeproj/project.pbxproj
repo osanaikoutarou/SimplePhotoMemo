@@ -10,6 +10,7 @@
 		1E982013216D3900007194B5 /* AddPhotoMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E982012216D3900007194B5 /* AddPhotoMemo.storyboard */; };
 		1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982014216D392F007194B5 /* AddPhotoMemoViewController.swift */; };
 		1E982017216D39C3007194B5 /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982016216D39C3007194B5 /* UIViewController+NavigationBar.swift */; };
+		1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98201A216D405C007194B5 /* KeyboardController.swift */; };
 		1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */; };
 		1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */; };
 		1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABF216D130A008E63E4 /* Search.storyboard */; };
@@ -70,6 +71,7 @@
 		1E982012216D3900007194B5 /* AddPhotoMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPhotoMemo.storyboard; sourceTree = "<group>"; };
 		1E982014216D392F007194B5 /* AddPhotoMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoMemoViewController.swift; sourceTree = "<group>"; };
 		1E982016216D39C3007194B5 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		1E98201A216D405C007194B5 /* KeyboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
 		1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		1EA51ABF216D130A008E63E4 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -152,6 +154,22 @@
 			path = AddPhotoMemo;
 			sourceTree = "<group>";
 		};
+		1E982018216D403A007194B5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1E982019216D4048007194B5 /* Utility */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1E982019216D4048007194B5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1E98201A216D405C007194B5 /* KeyboardController.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		1EA51AB8216D0B2B008E63E4 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +247,7 @@
 		DAD20C65216C4146004CB68B /* SimplePhotoMemo */ = {
 			isa = PBXGroup;
 			children = (
+				1E982018216D403A007194B5 /* Common */,
 				1EA51AB8216D0B2B008E63E4 /* Screen */,
 				DAD20C83216CA8E0004CB68B /* Extension */,
 				DAD20C7D216CA59D004CB68B /* View */,
@@ -582,6 +601,7 @@
 				1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */,
 				1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */,
 				DAD20CC8216CA8E0004CB68B /* StringTo.swift in Sources */,
+				1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */,
 				DAD20CD1216CA8E0004CB68B /* UIVIew+Frame.swift in Sources */,
 				DAD20CDF216CA8E0004CB68B /* UITableView+Utility.swift in Sources */,
 				DAD20CD8216CA8E0004CB68B /* Date+Utility.swift in Sources */,
