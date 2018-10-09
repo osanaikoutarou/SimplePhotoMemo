@@ -12,12 +12,18 @@ class PhotoMemoListViewController: UIViewController {
 
     @IBOutlet weak var itemTableView: UITableView!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         itemTableView.delegate = self
         itemTableView.dataSource = self
         
         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    @IBAction func tappedAddButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "AddPhotoMemo", sender: nil)
     }
 }
 
@@ -30,9 +36,6 @@ extension PhotoMemoListViewController: UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(with: PhotoMemoListTableViewCell.self, for: indexPath)
         return cell
     }
-    
-    
-    
-
-    
 }
+
+

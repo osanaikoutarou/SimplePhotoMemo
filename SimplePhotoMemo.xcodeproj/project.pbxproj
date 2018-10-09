@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E982013216D3900007194B5 /* AddPhotoMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E982012216D3900007194B5 /* AddPhotoMemo.storyboard */; };
+		1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982014216D392F007194B5 /* AddPhotoMemoViewController.swift */; };
+		1E982017216D39C3007194B5 /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982016216D39C3007194B5 /* UIViewController+NavigationBar.swift */; };
+		1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */; };
+		1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */; };
+		1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABF216D130A008E63E4 /* Search.storyboard */; };
+		1EA51AC2216D1327008E63E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC1216D1327008E63E4 /* SearchViewController.swift */; };
+		1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51AC4216D145F008E63E4 /* Group.storyboard */; };
+		1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC6216D146B008E63E4 /* GroupViewController.swift */; };
+		BE78EDB0367D424B7FE32C03 /* Pods_SimplePhotoMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */; };
 		DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C66216C4146004CB68B /* AppDelegate.swift */; };
 		DAD20C69216C4146004CB68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C68216C4146004CB68B /* ViewController.swift */; };
 		DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD20C6A216C4147004CB68B /* Main.storyboard */; };
@@ -57,6 +67,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E982012216D3900007194B5 /* AddPhotoMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPhotoMemo.storyboard; sourceTree = "<group>"; };
+		1E982014216D392F007194B5 /* AddPhotoMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoMemoViewController.swift; sourceTree = "<group>"; };
+		1E982016216D39C3007194B5 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		1EA51ABF216D130A008E63E4 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		1EA51AC1216D1327008E63E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1EA51AC4216D145F008E63E4 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
+		1EA51AC6216D146B008E63E4 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		2FE06DCCE0A28C4C66FEF9F3 /* Pods-SimplePhotoMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePhotoMemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo.release.xcconfig"; sourceTree = "<group>"; };
+		4FE9B64D7A040B1082FE4D44 /* Pods-SimplePhotoMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePhotoMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DAD20C63216C4146004CB68B /* SimplePhotoMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePhotoMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD20C66216C4146004CB68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD20C68216C4146004CB68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +128,7 @@
 		DAD20CB7216CA8E0004CB68B /* UIControl+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Action.swift"; sourceTree = "<group>"; };
 		DAD20CB9216CA8E0004CB68B /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		DAD20CBB216CA8E0004CB68B /* UIStoryboardSegue+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+Utility.swift"; sourceTree = "<group>"; };
+		EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplePhotoMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,17 +136,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE78EDB0367D424B7FE32C03 /* Pods_SimplePhotoMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E982011216D383B007194B5 /* AddPhotoMemo */ = {
+			isa = PBXGroup;
+			children = (
+				1E982012216D3900007194B5 /* AddPhotoMemo.storyboard */,
+				1E982014216D392F007194B5 /* AddPhotoMemoViewController.swift */,
+			);
+			path = AddPhotoMemo;
+			sourceTree = "<group>";
+		};
+		1EA51AB8216D0B2B008E63E4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1E982011216D383B007194B5 /* AddPhotoMemo */,
+				1EA51AC3216D1447008E63E4 /* Group */,
+				1EA51ABE216D11FE008E63E4 /* Search */,
+				1EA51AB9216D0B4C008E63E4 /* Setting */,
+				DAD20C78216C90D3004CB68B /* PhotoMemoList */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		1EA51AB9216D0B4C008E63E4 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */,
+				1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		1EA51ABE216D11FE008E63E4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1EA51ABF216D130A008E63E4 /* Search.storyboard */,
+				1EA51AC1216D1327008E63E4 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1EA51AC3216D1447008E63E4 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				1EA51AC4216D145F008E63E4 /* Group.storyboard */,
+				1EA51AC6216D146B008E63E4 /* GroupViewController.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		3A2AD95BC521A761447133F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9ACB4408C03D24E4F59A8760 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FE9B64D7A040B1082FE4D44 /* Pods-SimplePhotoMemo.debug.xcconfig */,
+				2FE06DCCE0A28C4C66FEF9F3 /* Pods-SimplePhotoMemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DAD20C5A216C4146004CB68B = {
 			isa = PBXGroup;
 			children = (
 				DAD20C65216C4146004CB68B /* SimplePhotoMemo */,
 				DAD20C64216C4146004CB68B /* Products */,
+				9ACB4408C03D24E4F59A8760 /* Pods */,
+				3A2AD95BC521A761447133F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,9 +229,9 @@
 		DAD20C65216C4146004CB68B /* SimplePhotoMemo */ = {
 			isa = PBXGroup;
 			children = (
+				1EA51AB8216D0B2B008E63E4 /* Screen */,
 				DAD20C83216CA8E0004CB68B /* Extension */,
 				DAD20C7D216CA59D004CB68B /* View */,
-				DAD20C78216C90D3004CB68B /* PhotoMemoList */,
 				DAD20C66216C4146004CB68B /* AppDelegate.swift */,
 				DAD20C68216C4146004CB68B /* ViewController.swift */,
 				DAD20C6A216C4147004CB68B /* Main.storyboard */,
@@ -314,6 +404,7 @@
 		DAD20CB0216CA8E0004CB68B /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1E982016216D39C3007194B5 /* UIViewController+NavigationBar.swift */,
 				DAD20CB2216CA8E0004CB68B /* UIViewController+Alert.swift */,
 				DAD20CB3216CA8E0004CB68B /* UIViewController+Utility.swift */,
 			);
@@ -359,6 +450,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAD20C75216C4150004CB68B /* Build configuration list for PBXNativeTarget "SimplePhotoMemo" */;
 			buildPhases = (
+				5170007744758BEF599AB730 /* [CP] Check Pods Manifest.lock */,
 				DAD20C5F216C4146004CB68B /* Sources */,
 				DAD20C60216C4146004CB68B /* Frameworks */,
 				DAD20C61216C4146004CB68B /* Resources */,
@@ -412,12 +504,37 @@
 			files = (
 				DAD20C71216C4150004CB68B /* LaunchScreen.storyboard in Resources */,
 				DAD20C7A216C91B3004CB68B /* PhotoMemoList.storyboard in Resources */,
+				1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */,
 				DAD20C6E216C4150004CB68B /* Assets.xcassets in Resources */,
 				DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */,
+				1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */,
+				1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */,
+				1E982013216D3900007194B5 /* AddPhotoMemo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5170007744758BEF599AB730 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimplePhotoMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAD20C5F216C4146004CB68B /* Sources */ = {
@@ -430,6 +547,7 @@
 				DAD20CDD216CA8E0004CB68B /* UIViewController+Alert.swift in Sources */,
 				DAD20CC1216CA8E0004CB68B /* Array+.swift in Sources */,
 				DAD20CC6216CA8E0004CB68B /* URL+.swift in Sources */,
+				1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */,
 				DAD20CC4216CA8E0004CB68B /* StoryboardInstantiatable.swift in Sources */,
 				DAD20CE0216CA8E0004CB68B /* UIControl+Action.swift in Sources */,
 				DAD20CC9216CA8E0004CB68B /* UICollectionView+.swift in Sources */,
@@ -451,14 +569,18 @@
 				DAD20CCC216CA8E0004CB68B /* UITableView+.swift in Sources */,
 				DAD20CE2216CA8E0004CB68B /* UIStoryboardSegue+Utility.swift in Sources */,
 				DAD20CDA216CA8E0004CB68B /* UICollectionView+Highlight.swift in Sources */,
+				1E982017216D39C3007194B5 /* UIViewController+NavigationBar.swift in Sources */,
 				DAD20CD3216CA8E0004CB68B /* UIView+Border.swift in Sources */,
 				DAD20CCB216CA8E0004CB68B /* UIImage+.swift in Sources */,
 				DAD20CD2216CA8E0004CB68B /* UIView+Corner.swift in Sources */,
+				1EA51AC2216D1327008E63E4 /* SearchViewController.swift in Sources */,
 				DAD20CDE216CA8E0004CB68B /* UIViewController+Utility.swift in Sources */,
 				DAD20C69216C4146004CB68B /* ViewController.swift in Sources */,
 				DAD20CC3216CA8E0004CB68B /* String+.swift in Sources */,
 				DAD20CCE216CA8E0004CB68B /* UIApplication+.swift in Sources */,
 				DAD20CE1216CA8E0004CB68B /* String+Utility.swift in Sources */,
+				1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */,
+				1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */,
 				DAD20CC8216CA8E0004CB68B /* StringTo.swift in Sources */,
 				DAD20CD1216CA8E0004CB68B /* UIVIew+Frame.swift in Sources */,
 				DAD20CDF216CA8E0004CB68B /* UITableView+Utility.swift in Sources */,
@@ -608,6 +730,7 @@
 		};
 		DAD20C76216C4150004CB68B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE9B64D7A040B1082FE4D44 /* Pods-SimplePhotoMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,6 +749,7 @@
 		};
 		DAD20C77216C4150004CB68B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FE06DCCE0A28C4C66FEF9F3 /* Pods-SimplePhotoMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
