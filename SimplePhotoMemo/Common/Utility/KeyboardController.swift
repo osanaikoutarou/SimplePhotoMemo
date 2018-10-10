@@ -14,7 +14,7 @@ enum TargetViewType {
     case scrollView
     case textView
     case tableView
-    case constraintConstant
+    case custom     // 自分で操作する場合
 }
 
 class KeyboardController {
@@ -25,7 +25,6 @@ class KeyboardController {
     var defaultInsets:UIEdgeInsets?
     var defaultConstraints:[CGFloat]?
     var kbSize:CGSize?
-    var tabbarHeight:CGFloat = 0
     
     var targetScrollView:UIScrollView?
     var targetTextView:UITextView?
@@ -38,7 +37,16 @@ class KeyboardController {
     var keyboardWasShownClosure:((_ notification: NSNotification) -> ())?
     var keyboardWillHideClosure:((_ notification: NSNotification) -> ())?
     var keyboardDidHideClosure:((_ notification: NSNotification) -> ())?
+
+    var keyboardWillShowClosureEx:((_ notification: NSNotification, _ keyboardAnimationDuration:Double?, _ keyboardAnimationCurve:Int?, _ keyboardFrame: CGRect?) -> ())?
+    var keyboardWasShownClosureEx:((_ notification: NSNotification, _ keyboardAnimationDuration:Double?, _ keyboardAnimationCurve:Int?, _ keyboardFrame: CGRect?) -> ())?
+    var keyboardWillHideClosureEx:((_ notification: NSNotification, _ keyboardAnimationDuration:Double?, _ keyboardAnimationCurve:Int?, _ keyboardFrame: CGRect?) -> ())?
+    var keyboardDidHideClosureEx:((_ notification: NSNotification, _ keyboardAnimationDuration:Double?, _ keyboardAnimationCurve:Int?, _ keyboardFrame: CGRect?) -> ())?
+
     
+    func setup(type:TargetViewType) {
+        self.type = type
+    }
     
     func setup(targetView:UIView) {
         
@@ -61,12 +69,6 @@ class KeyboardController {
         }
         
         // typeを追加する場合ここに追記
-    }
-    
-    func setup(constraints:[NSLayoutConstraint]) {
-        type = .constraintConstant
-        targetConstraints = constraints
-        defaultConstraints = constraints.map { $0.constant }
     }
     
     func setTargetViewForShowingWithScroll(targetView:UIView) {
@@ -131,30 +133,24 @@ class KeyboardController {
         if let keyboardWillShowClosure = keyboardWillShowClosure {
             keyboardWillShowClosure(notification)
         }
+        
+        if let keyboardWillShownClosureEx = keyboardWillShowClosureEx {
+            keyboardWillShownClosureEx(notification,
+                                       notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]! as? Double,
+                                       notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]! as? Int,
+                                       notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as? CGRect)
+        }
     }
     @objc func keyboardWasShown(notification: NSNotification) {
         let rect = notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as! CGRect
         kbSize = rect.size
         
-        if (type == .constraintConstant) {
-            if let targetConstraints = targetConstraints {
-                //TODO:リファクタ
-                let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]! as! Double
-                let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]! as! Int
-                let rect = notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as! CGRect
-                
-                UIView.setAnimationDuration(duration)
-                UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: curve)!)
-                UIView.setAnimationBeginsFromCurrentState(true)
-                
-                targetConstraints.forEach { $0.constant += (kbSize?.height)! - tabbarHeight }
-
-                
-                UIView.commitAnimations()
-                
-            }
-            if let keyboardWasShownClosure = keyboardWasShownClosure {
-                keyboardWasShownClosure(notification)
+        if (type == .custom) {
+            if let keyboardWasShownClosureEx = keyboardWasShownClosureEx {
+                keyboardWasShownClosureEx(notification,
+                                          notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]! as? Double,
+                                          notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]! as? Int,
+                                          notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as? CGRect)
             }
         }
 
@@ -192,14 +188,16 @@ class KeyboardController {
             targetTableView?.scrollIndicatorInsets = defaultInsets!
         }
 
-        if (type == .constraintConstant) {
-            //TODO:もとに戻す
-            targetConstraints?.forEach { $0.constant = 0 }
-        }
         // typeを追加する場合ここに追記
         
         if let keyboardWillHideClosure = keyboardWillHideClosure {
             keyboardWillHideClosure(notification)
+        }
+        if let keyboardWillHideClosureEx = keyboardWillHideClosureEx {
+            keyboardWillHideClosureEx(notification,
+                                      notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]! as? Double,
+                                      notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]! as? Int,
+                                      notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as? CGRect)
         }
     }
     @objc func keyboardDidHide(notification: NSNotification) {
@@ -211,6 +209,13 @@ class KeyboardController {
         if let keyboardDidHideClosure = keyboardDidHideClosure {
             keyboardDidHideClosure(notification)
         }
+        if let keyboardDidHideClosureEx = keyboardDidHideClosureEx {
+            keyboardDidHideClosureEx(notification,
+                                     notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]! as? Double,
+                                     notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]! as? Int,
+                                     notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as? CGRect)
+        }
+        
     }
     
     func refreshContentInset(contentInset:UIEdgeInsets) {
@@ -304,3 +309,25 @@ class KeyboardController {
 
     
 }
+
+extension UIViewAnimationOptions {
+    init(curve: UIViewAnimationCurve) {
+        switch curve {
+        case .easeIn:
+            self = .curveEaseIn
+        case .easeOut:
+            self = .curveEaseOut
+        case .easeInOut:
+            self = .curveEaseInOut
+        case .linear:
+            self = .curveLinear
+        }
+    }
+    
+    static func curveWithInt(_ curve:Int) -> UIViewAnimationOptions {
+        let animationCurve = UIViewAnimationCurve(rawValue: curve )!
+        let animationOption = UIViewAnimationOptions.init(curve: animationCurve)
+        return animationOption
+    }
+}
+

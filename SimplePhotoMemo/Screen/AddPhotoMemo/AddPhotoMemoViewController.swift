@@ -19,10 +19,41 @@ class AddPhotoMemoViewController: UIViewController {
         super.viewDidLoad()
 
         addCloseButton()
-        keyboardController.setup(constraints: [inputViewsBottom])
-        keyboardController.setupKeyboardNotification()
-        keyboardController.tabbarHeight = (self.tabBarController?.tabBar.height)!
+        setupKeyboard()
         
+        
+    }
+    
+    func setupKeyboard() {
+        keyboardController.setup(type: .custom)
+        
+        keyboardController.setupKeyboardNotification()
+        
+        keyboardController.keyboardWillShowClosureEx = { (notification, duration, curve, keyboardFrame) in
+            if let keyboadFrame = keyboardFrame {
+                self.inputViewsBottom.constant = keyboadFrame.size.height - (self.tabBarController?.tabBar.height)!
+                
+                UIView.animate(withDuration: duration!,
+                               delay: 0,
+                               options: [UIViewAnimationOptions.curveWithInt(curve ?? 0)],
+                               animations: {
+                                self.view.layoutIfNeeded()
+                }, completion: nil)
+            }
+        }
+        keyboardController.keyboardWillHideClosureEx = { (notification, duration, curve, keyboardFrame) in
+            self.inputViewsBottom.constant = 0
+            UIView.animate(withDuration: duration!,
+                           delay: 0,
+                           options: [UIViewAnimationOptions.curveWithInt(curve ?? 0)],
+                           animations: {
+                            self.view.layoutIfNeeded()
+            }, completion: nil)
+            
+        }
+        
+        
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedView))
         self.view.addGestureRecognizer(tap)
     }
