@@ -11,7 +11,7 @@ import UIKit
 class AddPhotoMemoViewController: UIViewController {
 
     @IBOutlet weak var sendImageView: UIImageView!
-    @IBOutlet weak var stackViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var inputViewsBottom: NSLayoutConstraint!
     var imagePickerDelegateController = ImagePickerDelegateController()
     var keyboardController = KeyboardController()
     
@@ -19,8 +19,9 @@ class AddPhotoMemoViewController: UIViewController {
         super.viewDidLoad()
 
         addCloseButton()
-        keyboardController.setup(constraints: [stackViewBottom])
+        keyboardController.setup(constraints: [inputViewsBottom])
         keyboardController.setupKeyboardNotification()
+        keyboardController.tabbarHeight = (self.tabBarController?.tabBar.height)!
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedView))
         self.view.addGestureRecognizer(tap)
