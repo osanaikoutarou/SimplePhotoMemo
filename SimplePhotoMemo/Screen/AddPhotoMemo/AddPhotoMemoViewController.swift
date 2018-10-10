@@ -18,7 +18,6 @@ class AddPhotoMemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addCloseButton()
         setupKeyboard()
     }
     

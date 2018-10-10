@@ -10,15 +10,14 @@ import UIKit
 
 class PhotoMemoListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        photoImageView.layer.cornerRadius = 10
+
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

@@ -11,8 +11,9 @@ import UIKit
 class PhotoMemoListViewController: UIViewController {
 
     @IBOutlet weak var itemTableView: UITableView!
+    @IBOutlet weak var subInformationLabel: UILabel!
+    @IBOutlet weak var memoLabel: LineSpacingLabel!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
