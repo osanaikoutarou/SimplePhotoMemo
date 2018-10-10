@@ -110,7 +110,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="photoImageView" destination="3zM-QI-WyP" id="br1-pT-9uU"/>
+                                            <outlet property="memoLabel" destination="qdG-QM-SCo" id="5Cj-k6-MRq"/>
+                                            <outlet property="photoImageView" destination="3zM-QI-WyP" id="KLT-6m-s7W"/>
+                                            <outlet property="subInfoLabel" destination="0Hy-OY-Vxp" id="4JD-tT-ngC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -128,9 +130,8 @@
                     <navigationItem key="navigationItem" id="dbS-Ze-Eag"/>
                     <connections>
                         <outlet property="itemTableView" destination="HQc-Qz-OZ8" id="hty-DQ-LQv"/>
-                        <outlet property="memoLabel" destination="qdG-QM-SCo" id="UtM-Wk-8cs"/>
-                        <outlet property="subInformationLabel" destination="0Hy-OY-Vxp" id="N9j-Sp-ZZp"/>
                         <segue destination="T92-fc-Kzp" kind="showDetail" identifier="AddPhotoMemo" id="1Dd-yh-YEn"/>
+                        <segue destination="OrO-Yu-XRG" kind="show" identifier="PhotoMemoDetail" id="lN8-sZ-8Ax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIy-UY-enn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,7 +144,15 @@
                 <viewControllerPlaceholder storyboardName="AddPhotoMemo" id="T92-fc-Kzp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVY-fY-vEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015" y="28"/>
+            <point key="canvasLocation" x="2033" y="-158"/>
+        </scene>
+        <!--PhotoMemoDetailViewController-->
+        <scene sceneID="QUT-rM-1kH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoMemoDetail" referencedIdentifier="PhotoMemoDetailViewController" id="OrO-Yu-XRG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIy-NE-EPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2042" y="-7"/>
         </scene>
         <!--Photo-->
         <scene sceneID="IiL-tc-mQb">

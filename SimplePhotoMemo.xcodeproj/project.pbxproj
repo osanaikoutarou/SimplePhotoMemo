@@ -11,6 +11,10 @@
 		1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982014216D392F007194B5 /* AddPhotoMemoViewController.swift */; };
 		1E982017216D39C3007194B5 /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982016216D39C3007194B5 /* UIViewController+NavigationBar.swift */; };
 		1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98201A216D405C007194B5 /* KeyboardController.swift */; };
+		1E98201E216E46AB007194B5 /* PhotoMemoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E98201D216E46AB007194B5 /* PhotoMemoDetail.storyboard */; };
+		1E982020216E46EE007194B5 /* PhotoMemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */; };
+		1E982022216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982021216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift */; };
+		1E982024216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982023216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift */; };
 		1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */; };
 		1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */; };
 		1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABF216D130A008E63E4 /* Search.storyboard */; };
@@ -72,6 +76,10 @@
 		1E982014216D392F007194B5 /* AddPhotoMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoMemoViewController.swift; sourceTree = "<group>"; };
 		1E982016216D39C3007194B5 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		1E98201A216D405C007194B5 /* KeyboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
+		1E98201D216E46AB007194B5 /* PhotoMemoDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoMemoDetail.storyboard; sourceTree = "<group>"; };
+		1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailViewController.swift; sourceTree = "<group>"; };
+		1E982021216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		1E982023216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailMemoTableViewCell.swift; sourceTree = "<group>"; };
 		1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		1EA51ABF216D130A008E63E4 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -170,9 +178,21 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		1E98201C216E4643007194B5 /* PhotoMemoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1E98201D216E46AB007194B5 /* PhotoMemoDetail.storyboard */,
+				1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */,
+				1E982021216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift */,
+				1E982023216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift */,
+			);
+			path = PhotoMemoDetail;
+			sourceTree = "<group>";
+		};
 		1EA51AB8216D0B2B008E63E4 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				1E98201C216E4643007194B5 /* PhotoMemoDetail */,
 				1E982011216D383B007194B5 /* AddPhotoMemo */,
 				1EA51AC3216D1447008E63E4 /* Group */,
 				1EA51ABE216D11FE008E63E4 /* Search */,
@@ -528,6 +548,7 @@
 				DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */,
 				1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */,
 				1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */,
+				1E98201E216E46AB007194B5 /* PhotoMemoDetail.storyboard in Resources */,
 				1E982013216D3900007194B5 /* AddPhotoMemo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,10 +593,12 @@
 				DAD20CC9216CA8E0004CB68B /* UICollectionView+.swift in Sources */,
 				DAD20CC7216CA8E0004CB68B /* Dictionary+.swift in Sources */,
 				DAD20CBC216CA8E0004CB68B /* UIScrollView+Utility.swift in Sources */,
+				1E982020216E46EE007194B5 /* PhotoMemoDetailViewController.swift in Sources */,
 				DAD20CD7216CA8E0004CB68B /* Array+Safe.swift in Sources */,
 				DAD20CCD216CA8E0004CB68B /* NibInstantiatable.swift in Sources */,
 				DAD20CCA216CA8E0004CB68B /* Safe.swift in Sources */,
 				DAD20CC5216CA8E0004CB68B /* TargetedExtension.swift in Sources */,
+				1E982024216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */,
 				DAD20CDB216CA8E0004CB68B /* Int+Utility.swift in Sources */,
 				DAD20CD6216CA8E0004CB68B /* Array+Utility.swift in Sources */,
 				DAD20CD4216CA8E0004CB68B /* UIView+Gesture.swift in Sources */,
@@ -598,6 +621,7 @@
 				DAD20CC3216CA8E0004CB68B /* String+.swift in Sources */,
 				DAD20CCE216CA8E0004CB68B /* UIApplication+.swift in Sources */,
 				DAD20CE1216CA8E0004CB68B /* String+Utility.swift in Sources */,
+				1E982022216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */,
 				1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */,
 				1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */,
 				DAD20CC8216CA8E0004CB68B /* StringTo.swift in Sources */,

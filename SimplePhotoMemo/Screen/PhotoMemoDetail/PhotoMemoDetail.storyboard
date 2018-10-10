@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Taf-wA-SzO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Memo Detail View Controller-->
+        <scene sceneID="TOq-S0-gt6">
+            <objects>
+                <viewController storyboardIdentifier="PhotoMemoDetailViewController" id="5Sw-Lo-yAU" customClass="PhotoMemoDetailViewController" customModule="SimplePhotoMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RbX-td-in4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="riz-lx-bya">
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoMemoDetailPhotoTableViewCell" rowHeight="327" id="2Zd-8h-FjU" customClass="PhotoMemoDetailPhotoTableViewCell" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="327"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Zd-8h-FjU" id="Yht-d5-XbW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="326.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huukei1" translatesAutoresizingMaskIntoConstraints="NO" id="ghB-DD-D5n">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="326.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ghB-DD-D5n" secondAttribute="height" multiplier="375:326" identifier="ratio" id="8b3-Vx-z97"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ghB-DD-D5n" firstAttribute="leading" secondItem="Yht-d5-XbW" secondAttribute="leading" id="8WE-gk-bUj"/>
+                                                <constraint firstItem="ghB-DD-D5n" firstAttribute="top" secondItem="Yht-d5-XbW" secondAttribute="top" id="ZPD-9q-2bM"/>
+                                                <constraint firstAttribute="trailing" secondItem="ghB-DD-D5n" secondAttribute="trailing" id="g2P-nE-gSv"/>
+                                                <constraint firstAttribute="bottom" secondItem="ghB-DD-D5n" secondAttribute="bottom" id="tz0-vt-n0D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="ghB-DD-D5n" id="aYa-iq-wBU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoMemoDetailMemoTableViewCell" rowHeight="323" id="HR3-tu-5lz" customClass="PhotoMemoDetailMemoTableViewCell" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="355" width="375" height="323"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HR3-tu-5lz" id="ktF-KG-md2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="322.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-kk-Hwp">
+                                                    <rect key="frame" x="10" y="0.0" width="355" height="312.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gIF-kk-Hwp" firstAttribute="top" secondItem="ktF-KG-md2" secondAttribute="top" id="54B-xA-ost"/>
+                                                <constraint firstAttribute="trailing" secondItem="gIF-kk-Hwp" secondAttribute="trailing" constant="10" id="Z8O-MU-6sc"/>
+                                                <constraint firstItem="gIF-kk-Hwp" firstAttribute="leading" secondItem="ktF-KG-md2" secondAttribute="leading" constant="10" id="t5W-Q4-vEm"/>
+                                                <constraint firstAttribute="bottom" secondItem="gIF-kk-Hwp" secondAttribute="bottom" constant="10" id="zDn-LP-0iL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="gIF-kk-Hwp" id="VUs-mD-vMI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M2o-i9-t9L" firstAttribute="bottom" secondItem="riz-lx-bya" secondAttribute="bottom" id="2wa-98-THd"/>
+                            <constraint firstItem="riz-lx-bya" firstAttribute="leading" secondItem="M2o-i9-t9L" secondAttribute="leading" id="MjT-zs-3cs"/>
+                            <constraint firstItem="riz-lx-bya" firstAttribute="top" secondItem="M2o-i9-t9L" secondAttribute="top" id="pX3-YV-xvR"/>
+                            <constraint firstAttribute="trailing" secondItem="riz-lx-bya" secondAttribute="trailing" id="pz2-cW-1GZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M2o-i9-t9L"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wPm-Zu-wUy"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="detailTableView" destination="riz-lx-bya" id="KpR-kq-Vgr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJB-4b-Ibm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.2" y="-18.890554722638683"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0dD-YF-Fux">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Taf-wA-SzO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UfQ-Pi-eYh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Sw-Lo-yAU" kind="relationship" relationship="rootViewController" id="x7g-xY-sT8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHx-2i-yTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="-18.440779610194905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="huukei1" width="3024" height="4032"/>
+    </resources>
+</document>

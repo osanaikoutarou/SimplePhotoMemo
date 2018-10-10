@@ -11,6 +11,9 @@ import UIKit
 class PhotoMemoListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var subInfoLabel: UILabel!
+    
+    @IBOutlet weak var memoLabel: LineSpacingLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
