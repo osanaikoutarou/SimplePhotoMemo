@@ -10,10 +10,19 @@ import UIKit
 
 class GroupViewController: UIViewController {
 
+    @IBOutlet weak var groupCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        groupCollectionView.delegate = self
+        groupCollectionView.dataSource = self
 
-        // Do any additional setup after loading the view.
+        let layout = UICollectionViewFlowLayout()
+        
+        layout.itemSize = CGSize(width: (self.view.width - 50)/3.0,
+                                 height:(self.view.width - 50)/3.0 * 100/130.0 )
+        
+        groupCollectionView.setCollectionViewLayout(layout, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,3 +42,34 @@ class GroupViewController: UIViewController {
     */
 
 }
+
+extension GroupViewController:UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1000
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let c = [UIColor.red, UIColor.blue, UIColor.orange, UIColor.green, UIColor.purple, UIColor.gray][indexPath.item % 6]
+        let t = ["aaa","bbb","abcdefg","ああああああああいうえお","#メダルアート","ほげ","ヌッ"][indexPath.item % 7]
+        
+        let cell = collectionView.dequeueReusableCell(with: SampleCell.self, for: indexPath)
+//        cell.backgroundColor = c
+//        cell.label1.text = t
+        
+        cell.clipsToBounds = true
+        cell.layer.cornerRadius = 5
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 1
+        
+        
+        return cell
+    }
+    
+}
+
+class SampleCell:UICollectionViewCell {
+    @IBOutlet weak var label1: UILabel!
+    
+}
+
