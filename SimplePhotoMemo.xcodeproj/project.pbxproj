@@ -22,6 +22,22 @@
 		1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51AC4216D145F008E63E4 /* Group.storyboard */; };
 		1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC6216D146B008E63E4 /* GroupViewController.swift */; };
 		BE78EDB0367D424B7FE32C03 /* Pods_SimplePhotoMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */; };
+		DA15323421707A0C0068F195 /* ShadowCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323321707A0C0068F195 /* ShadowCreator.swift */; };
+		DA15323621707E770068F195 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323521707E770068F195 /* UIView+Shadow.swift */; };
+		DA15324821707EE20068F195 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323821707EE10068F195 /* PaddingLabel.swift */; };
+		DA15324921707EE20068F195 /* ViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323921707EE10068F195 /* ViewCreator.swift */; };
+		DA15324A21707EE20068F195 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323A21707EE10068F195 /* ShadowView.swift */; };
+		DA15324B21707EE20068F195 /* CommonTitleAndLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323C21707EE10068F195 /* CommonTitleAndLabelTableViewCell.swift */; };
+		DA15324C21707EE20068F195 /* CommonTitleSmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323D21707EE10068F195 /* CommonTitleSmallTableViewCell.swift */; };
+		DA15324D21707EE20068F195 /* CommonTitleAndLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA15323E21707EE10068F195 /* CommonTitleAndLabelTableViewCell.xib */; };
+		DA15324E21707EE20068F195 /* CommonTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA15323F21707EE10068F195 /* CommonTitleTableViewCell.xib */; };
+		DA15324F21707EE20068F195 /* CommonTitleSmallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA15324021707EE10068F195 /* CommonTitleSmallTableViewCell.xib */; };
+		DA15325021707EE20068F195 /* CommonTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324121707EE10068F195 /* CommonTitleTableViewCell.swift */; };
+		DA15325121707EE20068F195 /* HorizontalNavigationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA15324321707EE10068F195 /* HorizontalNavigationCollectionViewCell.xib */; };
+		DA15325221707EE20068F195 /* HorizontalNavigationCollectionViewBase.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA15324421707EE10068F195 /* HorizontalNavigationCollectionViewBase.xib */; };
+		DA15325321707EE20068F195 /* HorizontalNavigationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324521707EE10068F195 /* HorizontalNavigationCollectionViewCell.swift */; };
+		DA15325421707EE20068F195 /* HorizontalNavigationCollectionViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324621707EE10068F195 /* HorizontalNavigationCollectionViewBase.swift */; };
+		DA15325521707EE20068F195 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324721707EE10068F195 /* ButtonView.swift */; };
 		DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C66216C4146004CB68B /* AppDelegate.swift */; };
 		DAD20C69216C4146004CB68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C68216C4146004CB68B /* ViewController.swift */; };
 		DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD20C6A216C4147004CB68B /* Main.storyboard */; };
@@ -88,6 +104,22 @@
 		1EA51AC6216D146B008E63E4 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		2FE06DCCE0A28C4C66FEF9F3 /* Pods-SimplePhotoMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePhotoMemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo.release.xcconfig"; sourceTree = "<group>"; };
 		4FE9B64D7A040B1082FE4D44 /* Pods-SimplePhotoMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePhotoMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DA15323321707A0C0068F195 /* ShadowCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCreator.swift; sourceTree = "<group>"; };
+		DA15323521707E770068F195 /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		DA15323821707EE10068F195 /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		DA15323921707EE10068F195 /* ViewCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCreator.swift; sourceTree = "<group>"; };
+		DA15323A21707EE10068F195 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		DA15323C21707EE10068F195 /* CommonTitleAndLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTitleAndLabelTableViewCell.swift; sourceTree = "<group>"; };
+		DA15323D21707EE10068F195 /* CommonTitleSmallTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTitleSmallTableViewCell.swift; sourceTree = "<group>"; };
+		DA15323E21707EE10068F195 /* CommonTitleAndLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTitleAndLabelTableViewCell.xib; sourceTree = "<group>"; };
+		DA15323F21707EE10068F195 /* CommonTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTitleTableViewCell.xib; sourceTree = "<group>"; };
+		DA15324021707EE10068F195 /* CommonTitleSmallTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTitleSmallTableViewCell.xib; sourceTree = "<group>"; };
+		DA15324121707EE10068F195 /* CommonTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTitleTableViewCell.swift; sourceTree = "<group>"; };
+		DA15324321707EE10068F195 /* HorizontalNavigationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontalNavigationCollectionViewCell.xib; sourceTree = "<group>"; };
+		DA15324421707EE10068F195 /* HorizontalNavigationCollectionViewBase.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontalNavigationCollectionViewBase.xib; sourceTree = "<group>"; };
+		DA15324521707EE10068F195 /* HorizontalNavigationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalNavigationCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA15324621707EE10068F195 /* HorizontalNavigationCollectionViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalNavigationCollectionViewBase.swift; sourceTree = "<group>"; };
+		DA15324721707EE10068F195 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		DAD20C63216C4146004CB68B /* SimplePhotoMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePhotoMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD20C66216C4146004CB68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD20C68216C4146004CB68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +197,7 @@
 		1E982018216D403A007194B5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DA15323721707EE10068F195 /* CommonView */,
 				1E982019216D4048007194B5 /* Utility */,
 			);
 			path = Common;
@@ -174,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				1E98201A216D405C007194B5 /* KeyboardController.swift */,
+				DA15323321707A0C0068F195 /* ShadowCreator.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -192,6 +226,7 @@
 		1EA51AB8216D0B2B008E63E4 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DA1532562170861E0068F195 /* PhoroMemoa */,
 				1E98201C216E4643007194B5 /* PhotoMemoDetail */,
 				1E982011216D383B007194B5 /* AddPhotoMemo */,
 				1EA51AC3216D1447008E63E4 /* Group */,
@@ -244,6 +279,51 @@
 				2FE06DCCE0A28C4C66FEF9F3 /* Pods-SimplePhotoMemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA15323721707EE10068F195 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				DA15323821707EE10068F195 /* PaddingLabel.swift */,
+				DA15323921707EE10068F195 /* ViewCreator.swift */,
+				DA15323A21707EE10068F195 /* ShadowView.swift */,
+				DA15323B21707EE10068F195 /* TableViewCell */,
+				DA15324221707EE10068F195 /* HorizontalNavigationCollectionViewBase */,
+				DA15324721707EE10068F195 /* ButtonView.swift */,
+			);
+			name = CommonView;
+			path = SimplePhotoMemo/Common/CommonView;
+			sourceTree = SOURCE_ROOT;
+		};
+		DA15323B21707EE10068F195 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA15323C21707EE10068F195 /* CommonTitleAndLabelTableViewCell.swift */,
+				DA15323D21707EE10068F195 /* CommonTitleSmallTableViewCell.swift */,
+				DA15323E21707EE10068F195 /* CommonTitleAndLabelTableViewCell.xib */,
+				DA15323F21707EE10068F195 /* CommonTitleTableViewCell.xib */,
+				DA15324021707EE10068F195 /* CommonTitleSmallTableViewCell.xib */,
+				DA15324121707EE10068F195 /* CommonTitleTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		DA15324221707EE10068F195 /* HorizontalNavigationCollectionViewBase */ = {
+			isa = PBXGroup;
+			children = (
+				DA15324321707EE10068F195 /* HorizontalNavigationCollectionViewCell.xib */,
+				DA15324421707EE10068F195 /* HorizontalNavigationCollectionViewBase.xib */,
+				DA15324521707EE10068F195 /* HorizontalNavigationCollectionViewCell.swift */,
+				DA15324621707EE10068F195 /* HorizontalNavigationCollectionViewBase.swift */,
+			);
+			path = HorizontalNavigationCollectionViewBase;
+			sourceTree = "<group>";
+		};
+		DA1532562170861E0068F195 /* PhoroMemoa */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhoroMemoa;
 			sourceTree = "<group>";
 		};
 		DAD20C5A216C4146004CB68B = {
@@ -383,6 +463,7 @@
 		DAD20C9E216CA8E0004CB68B /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				DA15323521707E770068F195 /* UIView+Shadow.swift */,
 				DAD20C9F216CA8E0004CB68B /* UIVIew+Frame.swift */,
 				DAD20CA0216CA8E0004CB68B /* UIView+Corner.swift */,
 				DAD20CA1216CA8E0004CB68B /* UIView+Border.swift */,
@@ -493,6 +574,7 @@
 				DAD20C5F216C4146004CB68B /* Sources */,
 				DAD20C60216C4146004CB68B /* Frameworks */,
 				DAD20C61216C4146004CB68B /* Resources */,
+				3C1A3AAC5BBF73A2A1AB2DE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -542,11 +624,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD20C71216C4150004CB68B /* LaunchScreen.storyboard in Resources */,
+				DA15325221707EE20068F195 /* HorizontalNavigationCollectionViewBase.xib in Resources */,
 				DAD20C7A216C91B3004CB68B /* PhotoMemoList.storyboard in Resources */,
 				1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */,
+				DA15324E21707EE20068F195 /* CommonTitleTableViewCell.xib in Resources */,
+				DA15325121707EE20068F195 /* HorizontalNavigationCollectionViewCell.xib in Resources */,
 				DAD20C6E216C4150004CB68B /* Assets.xcassets in Resources */,
 				DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */,
 				1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */,
+				DA15324F21707EE20068F195 /* CommonTitleSmallTableViewCell.xib in Resources */,
+				DA15324D21707EE20068F195 /* CommonTitleAndLabelTableViewCell.xib in Resources */,
 				1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */,
 				1E98201E216E46AB007194B5 /* PhotoMemoDetail.storyboard in Resources */,
 				1E982013216D3900007194B5 /* AddPhotoMemo.storyboard in Resources */,
@@ -556,6 +643,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3C1A3AAC5BBF73A2A1AB2DE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5170007744758BEF599AB730 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -582,18 +687,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD20CC2216CA8E0004CB68B /* UIView+.swift in Sources */,
+				DA15325421707EE20068F195 /* HorizontalNavigationCollectionViewBase.swift in Sources */,
 				DAD20CCF216CA8E0004CB68B /* Operator+.swift in Sources */,
 				DAD20CBD216CA8E0004CB68B /* UISceren+Utility.swift in Sources */,
 				DAD20CDD216CA8E0004CB68B /* UIViewController+Alert.swift in Sources */,
 				DAD20CC1216CA8E0004CB68B /* Array+.swift in Sources */,
 				DAD20CC6216CA8E0004CB68B /* URL+.swift in Sources */,
 				1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */,
+				DA15324921707EE20068F195 /* ViewCreator.swift in Sources */,
 				DAD20CC4216CA8E0004CB68B /* StoryboardInstantiatable.swift in Sources */,
 				DAD20CE0216CA8E0004CB68B /* UIControl+Action.swift in Sources */,
 				DAD20CC9216CA8E0004CB68B /* UICollectionView+.swift in Sources */,
 				DAD20CC7216CA8E0004CB68B /* Dictionary+.swift in Sources */,
 				DAD20CBC216CA8E0004CB68B /* UIScrollView+Utility.swift in Sources */,
 				1E982020216E46EE007194B5 /* PhotoMemoDetailViewController.swift in Sources */,
+				DA15324C21707EE20068F195 /* CommonTitleSmallTableViewCell.swift in Sources */,
 				DAD20CD7216CA8E0004CB68B /* Array+Safe.swift in Sources */,
 				DAD20CCD216CA8E0004CB68B /* NibInstantiatable.swift in Sources */,
 				DAD20CCA216CA8E0004CB68B /* Safe.swift in Sources */,
@@ -602,8 +710,11 @@
 				DAD20CDB216CA8E0004CB68B /* Int+Utility.swift in Sources */,
 				DAD20CD6216CA8E0004CB68B /* Array+Utility.swift in Sources */,
 				DAD20CD4216CA8E0004CB68B /* UIView+Gesture.swift in Sources */,
+				DA15324821707EE20068F195 /* PaddingLabel.swift in Sources */,
 				DAD20C82216CA852004CB68B /* PhotoMemoListTableViewCell.swift in Sources */,
+				DA15323421707A0C0068F195 /* ShadowCreator.swift in Sources */,
 				DAD20C7C216C9CC9004CB68B /* PhotoMemoListViewController.swift in Sources */,
+				DA15325321707EE20068F195 /* HorizontalNavigationCollectionViewCell.swift in Sources */,
 				DAD20CBE216CA8E0004CB68B /* UIColor+Utility.swift in Sources */,
 				DAD20CD5216CA8E0004CB68B /* UIView+Form.swift in Sources */,
 				DAD20CC0216CA8E0004CB68B /* NSObject+.swift in Sources */,
@@ -614,8 +725,11 @@
 				1E982017216D39C3007194B5 /* UIViewController+NavigationBar.swift in Sources */,
 				DAD20CD3216CA8E0004CB68B /* UIView+Border.swift in Sources */,
 				DAD20CCB216CA8E0004CB68B /* UIImage+.swift in Sources */,
+				DA15324A21707EE20068F195 /* ShadowView.swift in Sources */,
+				DA15323621707E770068F195 /* UIView+Shadow.swift in Sources */,
 				DAD20CD2216CA8E0004CB68B /* UIView+Corner.swift in Sources */,
 				1EA51AC2216D1327008E63E4 /* SearchViewController.swift in Sources */,
+				DA15324B21707EE20068F195 /* CommonTitleAndLabelTableViewCell.swift in Sources */,
 				DAD20CDE216CA8E0004CB68B /* UIViewController+Utility.swift in Sources */,
 				DAD20C69216C4146004CB68B /* ViewController.swift in Sources */,
 				DAD20CC3216CA8E0004CB68B /* String+.swift in Sources */,
@@ -625,6 +739,7 @@
 				1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */,
 				1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */,
 				DAD20CC8216CA8E0004CB68B /* StringTo.swift in Sources */,
+				DA15325021707EE20068F195 /* CommonTitleTableViewCell.swift in Sources */,
 				1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */,
 				DAD20CD1216CA8E0004CB68B /* UIVIew+Frame.swift in Sources */,
 				DAD20CDF216CA8E0004CB68B /* UITableView+Utility.swift in Sources */,
@@ -633,6 +748,7 @@
 				DAD20C80216CA5CC004CB68B /* LineSpacingLabel.swift in Sources */,
 				DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */,
 				DAD20CD9216CA8E0004CB68B /* CGPoint+Utility.swift in Sources */,
+				DA15325521707EE20068F195 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

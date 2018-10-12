@@ -19,8 +19,7 @@ class GroupViewController: UIViewController {
 
         let layout = UICollectionViewFlowLayout()
         
-        layout.itemSize = CGSize(width: (self.view.width - 50)/3.0,
-                                 height:(self.view.width - 50)/3.0 * 100/130.0 )
+        layout.itemSize = CGSize(width:160, height: 100)
         
         groupCollectionView.setCollectionViewLayout(layout, animated: false)
     }
@@ -57,10 +56,6 @@ extension GroupViewController:UICollectionViewDelegate, UICollectionViewDataSour
 //        cell.backgroundColor = c
 //        cell.label1.text = t
         
-        cell.clipsToBounds = true
-        cell.layer.cornerRadius = 5
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.borderWidth = 1
         
         
         return cell
@@ -69,7 +64,25 @@ extension GroupViewController:UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 class SampleCell:UICollectionViewCell {
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var label1: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        img.corner(radius: 5)
+
+        containerView.clipsToBounds = true
+        containerView.layer.cornerRadius = 10
+        containerView.layer.borderColor = UIColor.lightGray.cgColor
+        containerView.layer.borderWidth = 1.0/UIScreen.main.scale
+
+        containerView.addBelowShadowView(shadowColor: .black,
+                                         shadowOffset: CGSize(width: 2, height: 2),
+                                         shadowOpacity: 0.15,
+                                         shadowRadius: 1.0)
+        
+    }
     
 }
 
