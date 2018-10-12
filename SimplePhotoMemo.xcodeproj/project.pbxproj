@@ -38,6 +38,8 @@
 		DA15325321707EE20068F195 /* HorizontalNavigationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324521707EE10068F195 /* HorizontalNavigationCollectionViewCell.swift */; };
 		DA15325421707EE20068F195 /* HorizontalNavigationCollectionViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324621707EE10068F195 /* HorizontalNavigationCollectionViewBase.swift */; };
 		DA15325521707EE20068F195 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324721707EE10068F195 /* ButtonView.swift */; };
+		DA15325821708C360068F195 /* PhotoMemoDetailSlide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA15325721708C360068F195 /* PhotoMemoDetailSlide.storyboard */; };
+		DA15325A21708C580068F195 /* PhotoMemoDetailSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15325921708C580068F195 /* PhotoMemoDetailSlideViewController.swift */; };
 		DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C66216C4146004CB68B /* AppDelegate.swift */; };
 		DAD20C69216C4146004CB68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C68216C4146004CB68B /* ViewController.swift */; };
 		DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD20C6A216C4147004CB68B /* Main.storyboard */; };
@@ -120,6 +122,8 @@
 		DA15324521707EE10068F195 /* HorizontalNavigationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalNavigationCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA15324621707EE10068F195 /* HorizontalNavigationCollectionViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalNavigationCollectionViewBase.swift; sourceTree = "<group>"; };
 		DA15324721707EE10068F195 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		DA15325721708C360068F195 /* PhotoMemoDetailSlide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoMemoDetailSlide.storyboard; sourceTree = "<group>"; };
+		DA15325921708C580068F195 /* PhotoMemoDetailSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailSlideViewController.swift; sourceTree = "<group>"; };
 		DAD20C63216C4146004CB68B /* SimplePhotoMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePhotoMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD20C66216C4146004CB68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD20C68216C4146004CB68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */,
 				1E982021216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift */,
 				1E982023216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift */,
+				DA15325721708C360068F195 /* PhotoMemoDetailSlide.storyboard */,
+				DA15325921708C580068F195 /* PhotoMemoDetailSlideViewController.swift */,
 			);
 			path = PhotoMemoDetail;
 			sourceTree = "<group>";
@@ -226,7 +232,6 @@
 		1EA51AB8216D0B2B008E63E4 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				DA1532562170861E0068F195 /* PhoroMemoa */,
 				1E98201C216E4643007194B5 /* PhotoMemoDetail */,
 				1E982011216D383B007194B5 /* AddPhotoMemo */,
 				1EA51AC3216D1447008E63E4 /* Group */,
@@ -317,13 +322,6 @@
 				DA15324621707EE10068F195 /* HorizontalNavigationCollectionViewBase.swift */,
 			);
 			path = HorizontalNavigationCollectionViewBase;
-			sourceTree = "<group>";
-		};
-		DA1532562170861E0068F195 /* PhoroMemoa */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PhoroMemoa;
 			sourceTree = "<group>";
 		};
 		DAD20C5A216C4146004CB68B = {
@@ -626,6 +624,7 @@
 				DAD20C71216C4150004CB68B /* LaunchScreen.storyboard in Resources */,
 				DA15325221707EE20068F195 /* HorizontalNavigationCollectionViewBase.xib in Resources */,
 				DAD20C7A216C91B3004CB68B /* PhotoMemoList.storyboard in Resources */,
+				DA15325821708C360068F195 /* PhotoMemoDetailSlide.storyboard in Resources */,
 				1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */,
 				DA15324E21707EE20068F195 /* CommonTitleTableViewCell.xib in Resources */,
 				DA15325121707EE20068F195 /* HorizontalNavigationCollectionViewCell.xib in Resources */,
@@ -716,6 +715,7 @@
 				DAD20C7C216C9CC9004CB68B /* PhotoMemoListViewController.swift in Sources */,
 				DA15325321707EE20068F195 /* HorizontalNavigationCollectionViewCell.swift in Sources */,
 				DAD20CBE216CA8E0004CB68B /* UIColor+Utility.swift in Sources */,
+				DA15325A21708C580068F195 /* PhotoMemoDetailSlideViewController.swift in Sources */,
 				DAD20CD5216CA8E0004CB68B /* UIView+Form.swift in Sources */,
 				DAD20CC0216CA8E0004CB68B /* NSObject+.swift in Sources */,
 				DAD20CBF216CA8E0004CB68B /* ScopeMethod.swift in Sources */,
