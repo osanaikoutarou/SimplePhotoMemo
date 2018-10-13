@@ -16,12 +16,18 @@ class PhotoMemoListViewController: UIViewController {
         super.viewDidLoad()
         itemTableView.delegate = self
         itemTableView.dataSource = self
+        
+//        self.navigationController?.hidesBarsOnSwipe = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
+        
+        if let navigationController = self.navigationController as? ScrollingNavigationController {
+            navigationController.followScrollView(tableView, delay: 50.0)
+        }
     }
     
     @IBAction func tappedAddButton(_ sender: Any) {
@@ -35,6 +41,7 @@ extension PhotoMemoListViewController {
         if (segue.identifier == "PhotoMemoDetail") {
             let vc = segue.destination as! PhotoMemoDetailViewController
             vc.hidesBottomBarWhenPushed = true
+            vc.navigationController?.hidesBarsOnSwipe = true
         }
     }
 }
@@ -54,6 +61,15 @@ extension PhotoMemoListViewController: UITableViewDelegate,UITableViewDataSource
         
         self.performSegue(withIdentifier: "PhotoMemoDetail", sender: nil)
     }
+    
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+//            navigationController?.setNavigationBarHidden(true, animated: true)
+//        } else {
+//            navigationController?.setNavigationBarHidden(false, animated: true)
+//        }
+//    }
+
 }
 
 

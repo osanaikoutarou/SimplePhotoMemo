@@ -174,11 +174,20 @@
                     <navigationItem key="navigationItem" id="1ps-nQ-Fuz"/>
                     <connections>
                         <outlet property="groupCollectionView" destination="2QD-9E-PLk" id="XJa-Wh-K6O"/>
+                        <segue destination="vVB-Oa-cr9" kind="show" identifier="PhotoMemoListViewController" id="8BO-b4-f4G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4p-mx-R7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015.2" y="196.55172413793105"/>
+        </scene>
+        <!--PhotoMemoListViewController-->
+        <scene sceneID="asc-3O-mLL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoMemoList" referencedIdentifier="PhotoMemoListViewController" id="vVB-Oa-cr9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73K-GG-TlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="172"/>
         </scene>
         <!--Group-->
         <scene sceneID="Csv-uc-crn">
