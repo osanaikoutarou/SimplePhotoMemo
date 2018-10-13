@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AMScrollingNavbar
 
 class PhotoMemoListViewController: UIViewController {
 
@@ -23,10 +24,16 @@ class PhotoMemoListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        self.navigationController?.isNavigationBarHidden = true
+        if let navigationController = navigationController as? ScrollingNavigationController {
+            navigationController.followScrollView(self.itemTableView, delay: 100.0)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        if let navigationController = self.navigationController as? ScrollingNavigationController {
-            navigationController.followScrollView(tableView, delay: 50.0)
+        if let navigationController = navigationController as? ScrollingNavigationController {
+            navigationController.stopFollowingScrollView()
         }
     }
     
