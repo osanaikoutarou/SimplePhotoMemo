@@ -15,15 +15,15 @@ extension UIViewController {
         let button = UIButton.init(type: .system)
         button.setTitle("Menu", for: .normal)
         button.addAction(for: .touchUpInside) {
-            if (self.slideMenuController()?.isRightOpen())! {
-                self.slideMenuController()?.openRight()
+            if (self.slideMenuController()?.isLeftOpen())! {
+                self.slideMenuController()?.openLeft()
             }
-            else if (self.slideMenuController()?.isRightHidden())! {
-                self.slideMenuController()?.openRight()
+            else if (self.slideMenuController()?.isLeftHidden())! {
+                self.slideMenuController()?.openLeft()
             }
         }
         let barButtonItem = UIBarButtonItem.init(customView: button)
-        self.navigationItem.rightBarButtonItem = barButtonItem
+        self.navigationItem.leftBarButtonItem = barButtonItem
     }
     
     func addStatesCheckButton() {

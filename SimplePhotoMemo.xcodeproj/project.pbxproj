@@ -23,13 +23,10 @@
 		1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC6216D146B008E63E4 /* GroupViewController.swift */; };
 		1EC3C77F21725F800080E0AE /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC3C77E21725F800080E0AE /* SlideMenu.storyboard */; };
 		1EC3C781217266CB0080E0AE /* BaseSlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C780217266CB0080E0AE /* BaseSlideMenuViewController.swift */; };
-		1EC3C783217267370080E0AE /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C782217267370080E0AE /* RightMenuViewController.swift */; };
 		1EC3C78A217319370080E0AE /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C789217319370080E0AE /* TagCollectionViewCell.swift */; };
 		1EC3C78C217321B20080E0AE /* TagsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C78B217321B20080E0AE /* TagsCollectionViewLayout.swift */; };
-		1EC3C78E217321FD0080E0AE /* RightMenuTagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C78D217321FD0080E0AE /* RightMenuTagTableViewCell.swift */; };
 		1EC3C79121732C710080E0AE /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C79021732C710080E0AE /* TagModel.swift */; };
 		1EC3C794217331430080E0AE /* CalcSizeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C793217331430080E0AE /* CalcSizeUtility.swift */; };
-		1EC3C79621734C290080E0AE /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C79521734C290080E0AE /* TagTableViewCell.swift */; };
 		BE78EDB0367D424B7FE32C03 /* Pods_SimplePhotoMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */; };
 		DA15323421707A0C0068F195 /* ShadowCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323321707A0C0068F195 /* ShadowCreator.swift */; };
 		DA15323621707E770068F195 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15323521707E770068F195 /* UIView+Shadow.swift */; };
@@ -96,6 +93,11 @@
 		DAD20CE0216CA8E0004CB68B /* UIControl+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20CB7216CA8E0004CB68B /* UIControl+Action.swift */; };
 		DAD20CE1216CA8E0004CB68B /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20CB9216CA8E0004CB68B /* String+Utility.swift */; };
 		DAD20CE2216CA8E0004CB68B /* UIStoryboardSegue+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20CBB216CA8E0004CB68B /* UIStoryboardSegue+Utility.swift */; };
+		DAFDB66821743DBC00E4DEC4 /* Sandbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFDB66721743DBC00E4DEC4 /* Sandbox.storyboard */; };
+		DAFDB66A21743DC700E4DEC4 /* SandboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB66921743DC700E4DEC4 /* SandboxViewController.swift */; };
+		DAFDB673217473BD00E4DEC4 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB670217473BC00E4DEC4 /* TagTableViewCell.swift */; };
+		DAFDB674217473BD00E4DEC4 /* LeftMenuTagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB671217473BC00E4DEC4 /* LeftMenuTagTableViewCell.swift */; };
+		DAFDB675217473BD00E4DEC4 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB672217473BC00E4DEC4 /* LeftMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,13 +117,10 @@
 		1EA51AC6216D146B008E63E4 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		1EC3C77E21725F800080E0AE /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
 		1EC3C780217266CB0080E0AE /* BaseSlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlideMenuViewController.swift; sourceTree = "<group>"; };
-		1EC3C782217267370080E0AE /* RightMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
 		1EC3C789217319370080E0AE /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EC3C78B217321B20080E0AE /* TagsCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewLayout.swift; sourceTree = "<group>"; };
-		1EC3C78D217321FD0080E0AE /* RightMenuTagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMenuTagTableViewCell.swift; sourceTree = "<group>"; };
 		1EC3C79021732C710080E0AE /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
 		1EC3C793217331430080E0AE /* CalcSizeUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcSizeUtility.swift; sourceTree = "<group>"; };
-		1EC3C79521734C290080E0AE /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
 		2FE06DCCE0A28C4C66FEF9F3 /* Pods-SimplePhotoMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePhotoMemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo.release.xcconfig"; sourceTree = "<group>"; };
 		4FE9B64D7A040B1082FE4D44 /* Pods-SimplePhotoMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePhotoMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DA15323321707A0C0068F195 /* ShadowCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCreator.swift; sourceTree = "<group>"; };
@@ -192,6 +191,11 @@
 		DAD20CB7216CA8E0004CB68B /* UIControl+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Action.swift"; sourceTree = "<group>"; };
 		DAD20CB9216CA8E0004CB68B /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		DAD20CBB216CA8E0004CB68B /* UIStoryboardSegue+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+Utility.swift"; sourceTree = "<group>"; };
+		DAFDB66721743DBC00E4DEC4 /* Sandbox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sandbox.storyboard; sourceTree = "<group>"; };
+		DAFDB66921743DC700E4DEC4 /* SandboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxViewController.swift; sourceTree = "<group>"; };
+		DAFDB670217473BC00E4DEC4 /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
+		DAFDB671217473BC00E4DEC4 /* LeftMenuTagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTagTableViewCell.swift; sourceTree = "<group>"; };
+		DAFDB672217473BC00E4DEC4 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplePhotoMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -292,21 +296,11 @@
 		1EC3C77D21725F3B0080E0AE /* SlideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				1EC3C786217318120080E0AE /* RightMenu */,
+				DAFDB66F2174734300E4DEC4 /* LeftMenu */,
 				1EC3C77E21725F800080E0AE /* SlideMenu.storyboard */,
 				1EC3C780217266CB0080E0AE /* BaseSlideMenuViewController.swift */,
 			);
 			path = SlideMenu;
-			sourceTree = "<group>";
-		};
-		1EC3C786217318120080E0AE /* RightMenu */ = {
-			isa = PBXGroup;
-			children = (
-				1EC3C782217267370080E0AE /* RightMenuViewController.swift */,
-				1EC3C78D217321FD0080E0AE /* RightMenuTagTableViewCell.swift */,
-				1EC3C79521734C290080E0AE /* TagTableViewCell.swift */,
-			);
-			path = RightMenu;
 			sourceTree = "<group>";
 		};
 		1EC3C787217318970080E0AE /* General */ = {
@@ -410,6 +404,7 @@
 		DAD20C65216C4146004CB68B /* SimplePhotoMemo */ = {
 			isa = PBXGroup;
 			children = (
+				DAFDB66521743D6700E4DEC4 /* Debug */,
 				1EC3C78F21732C610080E0AE /* Model */,
 				1EC3C787217318970080E0AE /* General */,
 				1E982018216D403A007194B5 /* Common */,
@@ -628,6 +623,33 @@
 			path = UIStoryboardSegue;
 			sourceTree = "<group>";
 		};
+		DAFDB66521743D6700E4DEC4 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				DAFDB66621743D7500E4DEC4 /* Sandbox */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		DAFDB66621743D7500E4DEC4 /* Sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				DAFDB66721743DBC00E4DEC4 /* Sandbox.storyboard */,
+				DAFDB66921743DC700E4DEC4 /* SandboxViewController.swift */,
+			);
+			path = Sandbox;
+			sourceTree = "<group>";
+		};
+		DAFDB66F2174734300E4DEC4 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DAFDB671217473BC00E4DEC4 /* LeftMenuTagTableViewCell.swift */,
+				DAFDB672217473BC00E4DEC4 /* LeftMenuViewController.swift */,
+				DAFDB670217473BC00E4DEC4 /* TagTableViewCell.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -701,6 +723,7 @@
 				1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */,
 				DA15324F21707EE20068F195 /* CommonTitleSmallTableViewCell.xib in Resources */,
 				DA15324D21707EE20068F195 /* CommonTitleAndLabelTableViewCell.xib in Resources */,
+				DAFDB66821743DBC00E4DEC4 /* Sandbox.storyboard in Resources */,
 				1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */,
 				1E98201E216E46AB007194B5 /* PhotoMemoDetail.storyboard in Resources */,
 				1E982013216D3900007194B5 /* AddPhotoMemo.storyboard in Resources */,
@@ -780,16 +803,17 @@
 				1E982024216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */,
 				DAD20CDB216CA8E0004CB68B /* Int+Utility.swift in Sources */,
 				1EC3C79121732C710080E0AE /* TagModel.swift in Sources */,
+				DAFDB673217473BD00E4DEC4 /* TagTableViewCell.swift in Sources */,
 				DAD20CD6216CA8E0004CB68B /* Array+Utility.swift in Sources */,
 				DAD20CD4216CA8E0004CB68B /* UIView+Gesture.swift in Sources */,
 				DA15324821707EE20068F195 /* PaddingLabel.swift in Sources */,
 				DAD20C82216CA852004CB68B /* PhotoMemoListTableViewCell.swift in Sources */,
 				DA15323421707A0C0068F195 /* ShadowCreator.swift in Sources */,
+				DAFDB675217473BD00E4DEC4 /* LeftMenuViewController.swift in Sources */,
 				1EC3C794217331430080E0AE /* CalcSizeUtility.swift in Sources */,
 				DAD20C7C216C9CC9004CB68B /* PhotoMemoListViewController.swift in Sources */,
 				DA15325321707EE20068F195 /* HorizontalNavigationCollectionViewCell.swift in Sources */,
 				DAD20CBE216CA8E0004CB68B /* UIColor+Utility.swift in Sources */,
-				1EC3C79621734C290080E0AE /* TagTableViewCell.swift in Sources */,
 				1EC3C78A217319370080E0AE /* TagCollectionViewCell.swift in Sources */,
 				DA15325A21708C580068F195 /* PhotoMemoDetailSlideViewController.swift in Sources */,
 				1EC3C781217266CB0080E0AE /* BaseSlideMenuViewController.swift in Sources */,
@@ -805,6 +829,7 @@
 				DA15324A21707EE20068F195 /* ShadowView.swift in Sources */,
 				DA15323621707E770068F195 /* UIView+Shadow.swift in Sources */,
 				DAD20CD2216CA8E0004CB68B /* UIView+Corner.swift in Sources */,
+				DAFDB674217473BD00E4DEC4 /* LeftMenuTagTableViewCell.swift in Sources */,
 				1EA51AC2216D1327008E63E4 /* SearchViewController.swift in Sources */,
 				DA15324B21707EE20068F195 /* CommonTitleAndLabelTableViewCell.swift in Sources */,
 				DAD20CDE216CA8E0004CB68B /* UIViewController+Utility.swift in Sources */,
@@ -814,14 +839,13 @@
 				DAD20CCE216CA8E0004CB68B /* UIApplication+.swift in Sources */,
 				DAD20CE1216CA8E0004CB68B /* String+Utility.swift in Sources */,
 				1E982022216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */,
-				1EC3C78E217321FD0080E0AE /* RightMenuTagTableViewCell.swift in Sources */,
+				DAFDB66A21743DC700E4DEC4 /* SandboxViewController.swift in Sources */,
 				1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */,
 				1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */,
 				DAD20CC8216CA8E0004CB68B /* StringTo.swift in Sources */,
 				DA15325021707EE20068F195 /* CommonTitleTableViewCell.swift in Sources */,
 				1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */,
 				DAD20CD1216CA8E0004CB68B /* UIVIew+Frame.swift in Sources */,
-				1EC3C783217267370080E0AE /* RightMenuViewController.swift in Sources */,
 				DAD20CDF216CA8E0004CB68B /* UITableView+Utility.swift in Sources */,
 				DAD20CD8216CA8E0004CB68B /* Date+Utility.swift in Sources */,
 				DAD20CD0216CA8E0004CB68B /* UIColor+.swift in Sources */,

@@ -11,15 +11,15 @@ import SlideMenuControllerSwift
 
 class BaseSlideMenuViewController: SlideMenuController {
 
-    static let rightMenuWidth:CGFloat = SlideMenuOptions.rightViewWidth
+    static let leftMenuWidth:CGFloat = SlideMenuOptions.leftViewWidth
     
     override func awakeFromNib() {
         //ライブラリ特有のプロパティにセット
         mainViewController = UIStoryboard(name: "PhotoMemoList", bundle: nil).instantiateInitialViewController()
-        rightViewController = storyboard?.instantiateViewController(withIdentifier: "RightMenuViewController")
+        leftViewController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuViewController")
         
 //        SlideMenuOptions.leftViewWidth = 250
-        SlideMenuOptions.rightViewWidth = UIScreen.main.bounds.width - 50
+        SlideMenuOptions.leftViewWidth = UIScreen.main.bounds.width - 50
         SlideMenuOptions.contentViewScale = 1.0
         SlideMenuOptions.simultaneousGestureRecognizers = false
         SlideMenuOptions.animationDuration = 0.2

@@ -1,5 +1,5 @@
 //
-//  TagCollectionViewCell.swift
+//  TagTableViewCell.swift
 //  SimplePhotoMemo
 //
 //  Created by 長内幸太郎 on 2018/10/14.
@@ -8,20 +8,19 @@
 
 import UIKit
 
-class TagCollectionViewCell: UICollectionViewCell {
-    
+class TagTableViewCell: UITableViewCell {
+
     @IBOutlet weak var tagLabel: UILabel!
-    @IBOutlet weak var tagNumLabel: UILabel!
-    @IBOutlet weak var tagView: UIView!
+    @IBOutlet weak var tagPhotoNumLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        tagView.layer.cornerRadius = 10
-        tagView.clipsToBounds = true
     }
     
     func setup(_ tagModel:TagModel) {
+        
+        tagPhotoNumLabel.text = "\(tagModel.num)"
         tagLabel.text = tagModel.tag
-        tagNumLabel.text = "（\(tagModel.num)）"
+
     }
 }

@@ -14,7 +14,7 @@ class TagCollectionView: UICollectionView {
     }
 }
 
-class RightMenuTagTableViewCell: UITableViewCell {
+class LeftMenuTagTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tagCollectionView: TagCollectionView!
     
@@ -47,18 +47,24 @@ class TagCollectionViewSource: NSObject,UICollectionViewDelegate,UICollectionVie
         
         var sizes:[CGSize] = []
         tagModels.forEach { (tagModel) in
-//            let width = tagModel.tag.width(withConstrainedHeight: font.pointSize + 1.0, font: font)
-//            print("\(tagModel.tag) : \(width)")
-//            let size = CGSize(width: width + 4*2, // マージン
-//                              height: font.pointSize + 1.0 + 4*2)
-            let size = CGSize(width: (BaseSlideMenuViewController.rightMenuWidth - 60)/2.0, height: font.pointSize + 1.0 + 8*2)
+//            var width = tagModel.tag.width(withConstrainedHeight: font.pointSize + 1.0, font: font)
+//                        + "（\(tagModel.num)）".width(withConstrainedHeight: font.pointSize + 1.0, font: font)
+//                        + 4 + 4 + 4
+//                width = max(width, (BaseSlideMenuViewController.rightMenuWidth - 60)/2.0)
+            let width = (BaseSlideMenuViewController.leftMenuWidth - 60)/2.0
+            
+            print("\(tagModel.tag) : \(width)")
+            let size = CGSize(width: width, // マージン
+                              height: font.pointSize + 1.0 + 8*2)
+
+//            let size = CGSize(width: (BaseSlideMenuViewController.rightMenuWidth - 60)/2.0, height: font.pointSize + 1.0 + 8*2)
             sizes.append(size)
         }
         
         layout.setup(cellSizes: sizes,
-                     collectionViewWidth: BaseSlideMenuViewController.rightMenuWidth,
-                     horizontalMargin: 12,
-                     verticalMargin: 12,
+                     collectionViewWidth: BaseSlideMenuViewController.leftMenuWidth,
+                     horizontalMargin: 10,
+                     verticalMargin: 10,
                      collectionViewInset: UIEdgeInsetsMake(0, 15, 10, 15))
 
         collectionView.setCollectionViewLayout(layout, animated: false)
@@ -75,6 +81,27 @@ class TagCollectionViewSource: NSObject,UICollectionViewDelegate,UICollectionVie
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TagCollectionViewCell
+        cell.backgroundColor = .groupTableViewBackground
+//        UIView.animate(
+//            withDuration: 0.2 ,
+//            delay: 0,
+//            options: .curveEaseOut,
+//            animations: {
+//                cell.tagView.backgroundColor = .lightGray
+//        })
+    }
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TagCollectionViewCell
+        UIView.animate(
+            withDuration: 0.2 ,
+            delay: 0,
+            options: .curveEaseOut,
+            animations: {
+                cell.backgroundColor = .white
+        })
+    }
 //
 //    - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 //    {
