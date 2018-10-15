@@ -12,13 +12,16 @@ import AMScrollingNavbar
 class PhotoMemoListViewController: UIViewController {
 
     @IBOutlet weak var itemTableView: UITableView!
-
+    @IBOutlet weak var addButton: ButtonView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         itemTableView.delegate = self
         itemTableView.dataSource = self
         
 //        self.navigationController?.hidesBarsOnSwipe = true
+        
+        addMenuButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {

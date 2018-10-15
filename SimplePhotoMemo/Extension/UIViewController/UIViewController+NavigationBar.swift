@@ -11,20 +11,20 @@ import UIKit
 
 extension UIViewController {
     
-//    func addMenuButton() {
-//        let button = UIButton.init(type: .system)
-//        button.setTitle("Menu", for: .normal)
-//        button.addAction(for: .touchUpInside) {
-//            if (self.slideMenuController()?.isLeftOpen())! {
-//                self.slideMenuController()?.closeLeft()
-//            }
-//            else if (self.slideMenuController()?.isLeftHidden())! {
-//                self.slideMenuController()?.openLeft()
-//            }
-//        }
-//        let barButtonItem = UIBarButtonItem.init(customView: button)
-//        self.navigationItem.leftBarButtonItem = barButtonItem
-//    }
+    func addMenuButton() {
+        let button = UIButton.init(type: .system)
+        button.setTitle("Menu", for: .normal)
+        button.addAction(for: .touchUpInside) {
+            if (self.slideMenuController()?.isRightOpen())! {
+                self.slideMenuController()?.openRight()
+            }
+            else if (self.slideMenuController()?.isRightHidden())! {
+                self.slideMenuController()?.openRight()
+            }
+        }
+        let barButtonItem = UIBarButtonItem.init(customView: button)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+    }
     
     func addStatesCheckButton() {
         let button = UIButton.init(type: .system)

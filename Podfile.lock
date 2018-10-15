@@ -1,20 +1,24 @@
 PODS:
   - AMScrollingNavbar (4.3.1)
+  - SlideMenuControllerSwift (4.0.0)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
   - AMScrollingNavbar (< 5.0.0)
+  - SlideMenuControllerSwift
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AMScrollingNavbar
+    - SlideMenuControllerSwift
     - SnapKit
 
 SPEC CHECKSUMS:
   AMScrollingNavbar: 0f1f6f29cc41482ca0f5892769332f33c49663fa
+  SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: cb15fde8bae672ed10e5a8c8bd214e9d8cd16053
+PODFILE CHECKSUM: e123a545d2631847096fcc317425b2efe19a84dd
 
 COCOAPODS: 1.5.3

@@ -19,6 +19,8 @@ class AddPhotoMemoViewController: UIViewController {
         super.viewDidLoad()
 
         setupKeyboard()
+        
+        addCloseButton()
     }
     
     func setupKeyboard() {

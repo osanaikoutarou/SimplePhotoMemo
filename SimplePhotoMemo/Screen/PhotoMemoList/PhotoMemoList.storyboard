@@ -117,18 +117,41 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feQ-fe-k7o" customClass="ButtonView" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                <rect key="frame" x="305" y="548" width="50" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="zlO-v1-xQt">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1zH-rC-1MK"/>
+                                    <constraint firstItem="zlO-v1-xQt" firstAttribute="top" secondItem="feQ-fe-k7o" secondAttribute="top" id="5Uk-Ug-qu2"/>
+                                    <constraint firstAttribute="trailing" secondItem="zlO-v1-xQt" secondAttribute="trailing" id="faE-s7-ydn"/>
+                                    <constraint firstAttribute="height" constant="50" id="spG-zi-2S2"/>
+                                    <constraint firstAttribute="bottom" secondItem="zlO-v1-xQt" secondAttribute="bottom" id="vFV-gV-tNg"/>
+                                    <constraint firstItem="zlO-v1-xQt" firstAttribute="leading" secondItem="feQ-fe-k7o" secondAttribute="leading" id="vg7-SY-jeO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedAddButton:" destination="UFf-jE-va9" eventType="touchUpInside" id="Beg-Ta-z9T"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HQc-Qz-OZ8" secondAttribute="trailing" id="1ox-qE-04D"/>
+                            <constraint firstItem="0J6-m4-dc6" firstAttribute="trailing" secondItem="feQ-fe-k7o" secondAttribute="trailing" constant="20" id="OU7-Sa-Ncf"/>
                             <constraint firstItem="HQc-Qz-OZ8" firstAttribute="top" secondItem="9sf-iP-8Y8" secondAttribute="top" id="eeu-i1-Zfb"/>
                             <constraint firstItem="HQc-Qz-OZ8" firstAttribute="leading" secondItem="0J6-m4-dc6" secondAttribute="leading" id="f0x-YJ-rgv"/>
+                            <constraint firstItem="0J6-m4-dc6" firstAttribute="bottom" secondItem="feQ-fe-k7o" secondAttribute="bottom" constant="20" id="k2C-ev-CiK"/>
                             <constraint firstAttribute="bottom" secondItem="HQc-Qz-OZ8" secondAttribute="bottom" id="lM0-o2-Wg1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0J6-m4-dc6"/>
                     </view>
                     <navigationItem key="navigationItem" id="dbS-Ze-Eag"/>
                     <connections>
+                        <outlet property="addButton" destination="feQ-fe-k7o" id="ynm-5y-DZQ"/>
                         <outlet property="itemTableView" destination="HQc-Qz-OZ8" id="hty-DQ-LQv"/>
                         <segue destination="T92-fc-Kzp" kind="showDetail" identifier="AddPhotoMemo" id="1Dd-yh-YEn"/>
                         <segue destination="OrO-Yu-XRG" kind="show" identifier="PhotoMemoDetail" id="lN8-sZ-8Ax"/>
@@ -176,6 +199,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="33" height="33"/>
         <image name="huukei1" width="3024" height="4032"/>
     </resources>
 </document>
