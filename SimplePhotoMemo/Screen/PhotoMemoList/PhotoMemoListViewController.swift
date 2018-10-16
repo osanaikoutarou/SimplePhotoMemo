@@ -12,12 +12,15 @@ import AMScrollingNavbar
 class PhotoMemoListViewController: UIViewController {
 
     @IBOutlet weak var itemTableView: UITableView!
+    @IBOutlet weak var itemCollectioinView: UICollectionView!
     @IBOutlet weak var addButton: ButtonView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemTableView.delegate = self
-        itemTableView.dataSource = self
+        itemCollectioinView.delegate = self
+        itemCollectioinView.dataSource = self
+//        itemTableView.delegate = self
+//        itemTableView.dataSource = self
         
 //        self.navigationController?.hidesBarsOnSwipe = true
         
@@ -56,30 +59,53 @@ extension PhotoMemoListViewController {
     }
 }
 
-extension PhotoMemoListViewController: UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension PhotoMemoListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return LargePhotoMemoListCollectionViewCell.cellSize
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+extension PhotoMemoListViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(with: PhotoMemoListTableViewCell.self, for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(with: LargePhotoMemoListCollectionViewCell.self, for: indexPath)
+        cell.setup(photoMemo: PhotoMemo())
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        self.performSegue(withIdentifier: "PhotoMemoDetail", sender: nil)
-    }
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
-//            navigationController?.setNavigationBarHidden(true, animated: true)
-//        } else {
-//            navigationController?.setNavigationBarHidden(false, animated: true)
-//        }
-//    }
-
 }
+
+//extension PhotoMemoListViewController: UITableViewDelegate,UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 100
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(with: PhotoMemoListTableViewCell.self, for: indexPath)
+//        return cell
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//
+//        self.performSegue(withIdentifier: "PhotoMemoDetail", sender: nil)
+//    }
+//
+////    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+////        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+////            navigationController?.setNavigationBarHidden(true, animated: true)
+////        } else {
+////            navigationController?.setNavigationBarHidden(false, animated: true)
+////        }
+////    }
+//
+//}
 
 

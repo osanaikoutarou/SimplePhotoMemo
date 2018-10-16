@@ -98,6 +98,10 @@
 		DAFDB673217473BD00E4DEC4 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB670217473BC00E4DEC4 /* TagTableViewCell.swift */; };
 		DAFDB674217473BD00E4DEC4 /* LeftMenuTagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB671217473BC00E4DEC4 /* LeftMenuTagTableViewCell.swift */; };
 		DAFDB675217473BD00E4DEC4 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB672217473BC00E4DEC4 /* LeftMenuViewController.swift */; };
+		DAFDB677217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB676217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift */; };
+		DAFDB679217573DB00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB678217573DA00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift */; };
+		DAFDB67B2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB67A2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift */; };
+		DAFDB67D2175B3A000E4DEC4 /* PhotoMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB67C2175B3A000E4DEC4 /* PhotoMemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +200,10 @@
 		DAFDB670217473BC00E4DEC4 /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
 		DAFDB671217473BC00E4DEC4 /* LeftMenuTagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTagTableViewCell.swift; sourceTree = "<group>"; };
 		DAFDB672217473BC00E4DEC4 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		DAFDB676217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePhotoMemoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAFDB678217573DA00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NormalPhotoMemoListCollectionViewCell.swift; path = /Users/osanai/ios/SimplePhotoMemo/SimplePhotoMemo/Screen/PhotoMemoList/NormalPhotoMemoListCollectionViewCell.swift; sourceTree = "<absolute>"; };
+		DAFDB67A2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoThreePhotoMemoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAFDB67C2175B3A000E4DEC4 /* PhotoMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemo.swift; sourceTree = "<group>"; };
 		EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplePhotoMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -329,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				1EC3C79021732C710080E0AE /* TagModel.swift */,
+				DAFDB67C2175B3A000E4DEC4 /* PhotoMemo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,9 +433,12 @@
 		DAD20C78216C90D3004CB68B /* PhotoMemoList */ = {
 			isa = PBXGroup;
 			children = (
+				DAFDB678217573DA00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift */,
 				DAD20C79216C91B3004CB68B /* PhotoMemoList.storyboard */,
 				DAD20C7B216C9CC9004CB68B /* PhotoMemoListViewController.swift */,
 				DAD20C81216CA852004CB68B /* PhotoMemoListTableViewCell.swift */,
+				DAFDB676217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift */,
+				DAFDB67A2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift */,
 			);
 			path = PhotoMemoList;
 			sourceTree = "<group>";
@@ -811,6 +823,7 @@
 				DA15323421707A0C0068F195 /* ShadowCreator.swift in Sources */,
 				DAFDB675217473BD00E4DEC4 /* LeftMenuViewController.swift in Sources */,
 				1EC3C794217331430080E0AE /* CalcSizeUtility.swift in Sources */,
+				DAFDB67B2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift in Sources */,
 				DAD20C7C216C9CC9004CB68B /* PhotoMemoListViewController.swift in Sources */,
 				DA15325321707EE20068F195 /* HorizontalNavigationCollectionViewCell.swift in Sources */,
 				DAD20CBE216CA8E0004CB68B /* UIColor+Utility.swift in Sources */,
@@ -836,11 +849,13 @@
 				DAD20C69216C4146004CB68B /* ViewController.swift in Sources */,
 				1EC3C78C217321B20080E0AE /* TagsCollectionViewLayout.swift in Sources */,
 				DAD20CC3216CA8E0004CB68B /* String+.swift in Sources */,
+				DAFDB67D2175B3A000E4DEC4 /* PhotoMemo.swift in Sources */,
 				DAD20CCE216CA8E0004CB68B /* UIApplication+.swift in Sources */,
 				DAD20CE1216CA8E0004CB68B /* String+Utility.swift in Sources */,
 				1E982022216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */,
 				DAFDB66A21743DC700E4DEC4 /* SandboxViewController.swift in Sources */,
 				1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */,
+				DAFDB677217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift in Sources */,
 				1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */,
 				DAD20CC8216CA8E0004CB68B /* StringTo.swift in Sources */,
 				DA15325021707EE20068F195 /* CommonTitleTableViewCell.swift in Sources */,
@@ -852,6 +867,7 @@
 				DAD20C80216CA5CC004CB68B /* LineSpacingLabel.swift in Sources */,
 				DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */,
 				DAD20CD9216CA8E0004CB68B /* CGPoint+Utility.swift in Sources */,
+				DAFDB679217573DB00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */,
 				DA15325521707EE20068F195 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
