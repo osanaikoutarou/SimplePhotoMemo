@@ -61,7 +61,9 @@ extension PhotoMemoListViewController {
 
 extension PhotoMemoListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return LargePhotoMemoListCollectionViewCell.cellSize
+//        return LargePhotoMemoListCollectionViewCell.cellSize
+//        return NormalPhotoMemoListCollectionViewCell.cellSize
+        return PhotoThreePhotoMemoListCollectionViewCell.cellSize
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
@@ -76,7 +78,9 @@ extension PhotoMemoListViewController: UICollectionViewDelegate,UICollectionView
         return 100
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(with: LargePhotoMemoListCollectionViewCell.self, for: indexPath)
+//        let cell = collectionView.dequeueReusableCell(with: LargePhotoMemoListCollectionViewCell.self, for: indexPath)
+//        let cell = collectionView.dequeueReusableCell(with: NormalPhotoMemoListCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(with: PhotoThreePhotoMemoListCollectionViewCell.self, for: indexPath)
         cell.setup(photoMemo: PhotoMemo())
         return cell
     }
