@@ -26,8 +26,18 @@ class PhotoMemoDetailViewController: UIViewController {
         detailCollectionView.register(cellType: PhotoMemoDetailCollectionViewCell.self)
         detailCollectionView.delegate = self
         detailCollectionView.dataSource = self
-        
-        layout.itemSize = self.view.bounds.size
+
+        for i in 0..<100 {
+            let source = PhotoMemoDetailCollectionViewCellSource()
+            detailSources.append(source)
+        }
+
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        layout.itemSize = detailCollectionView.frame.size
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
@@ -35,12 +45,7 @@ class PhotoMemoDetailViewController: UIViewController {
         
         detailCollectionView.setCollectionViewLayout(layout, animated: false)
         
-        self.navigationController?.isNavigationBarHidden = false
     
-        for i in 0..<100 {
-            let source = PhotoMemoDetailCollectionViewCellSource()
-            detailSources.append(source)
-        }
     }
 }
 
