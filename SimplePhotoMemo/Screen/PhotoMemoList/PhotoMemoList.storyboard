@@ -340,14 +340,46 @@
                                     <action selector="tappedAddButton:" destination="UFf-jE-va9" eventType="touchUpInside" id="Beg-Ta-z9T"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHF-aS-iXs">
+                                <rect key="frame" x="20" y="1548" width="50" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNF-JJ-AGr" customClass="ButtonView" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-6D-SiX">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="bT5-j0-dng"/>
+                                            <constraint firstAttribute="height" constant="50" id="iL4-G0-KYi"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="tappedAddButton:" destination="UFf-jE-va9" eventType="touchUpInside" id="lSD-qV-aIA"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Lc-kk-R1A"/>
+                                    <constraint firstAttribute="trailing" secondItem="SNF-JJ-AGr" secondAttribute="trailing" id="EXD-gz-g3F"/>
+                                    <constraint firstAttribute="bottom" secondItem="SNF-JJ-AGr" secondAttribute="bottom" id="LqT-rl-Ze9"/>
+                                    <constraint firstItem="SNF-JJ-AGr" firstAttribute="leading" secondItem="ZHF-aS-iXs" secondAttribute="leading" id="b4c-q0-ZDh"/>
+                                    <constraint firstAttribute="width" constant="50" id="hoz-tm-swl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HQc-Qz-OZ8" secondAttribute="trailing" id="1ox-qE-04D"/>
                             <constraint firstItem="0J6-m4-dc6" firstAttribute="bottom" secondItem="v5L-wV-kY3" secondAttribute="bottom" id="DjN-1W-4ag"/>
+                            <constraint firstItem="0J6-m4-dc6" firstAttribute="bottom" secondItem="ZHF-aS-iXs" secondAttribute="bottom" constant="20" id="JdQ-ep-uAC"/>
                             <constraint firstItem="0J6-m4-dc6" firstAttribute="trailing" secondItem="feQ-fe-k7o" secondAttribute="trailing" constant="20" id="OU7-Sa-Ncf"/>
                             <constraint firstItem="0J6-m4-dc6" firstAttribute="trailing" secondItem="v5L-wV-kY3" secondAttribute="trailing" id="RsG-T1-YDw"/>
                             <constraint firstItem="v5L-wV-kY3" firstAttribute="top" secondItem="0J6-m4-dc6" secondAttribute="top" id="Teh-WC-CbP"/>
+                            <constraint firstItem="ZHF-aS-iXs" firstAttribute="leading" secondItem="0J6-m4-dc6" secondAttribute="leading" constant="20" id="aZW-pg-4xa"/>
                             <constraint firstItem="HQc-Qz-OZ8" firstAttribute="top" secondItem="9sf-iP-8Y8" secondAttribute="top" id="eeu-i1-Zfb"/>
                             <constraint firstItem="HQc-Qz-OZ8" firstAttribute="leading" secondItem="0J6-m4-dc6" secondAttribute="leading" id="f0x-YJ-rgv"/>
                             <constraint firstItem="0J6-m4-dc6" firstAttribute="bottom" secondItem="feQ-fe-k7o" secondAttribute="bottom" constant="20" id="k2C-ev-CiK"/>
