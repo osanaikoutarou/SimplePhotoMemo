@@ -15,20 +15,48 @@ class PhotoMemoDetailViewController: UIViewController {
         case memo
     }
     let cellTypes:[CellType] = [.photo,.memo]
+    var detailSources:[PhotoMemoDetailCollectionViewCellSource] = []
+    let layout = UICollectionViewFlowLayout()
     
-    @IBOutlet weak var detailTableView: UITableView!
+    @IBOutlet weak var detailCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailTableView.delegate = self
-        detailTableView.dataSource = self
+        detailCollectionView.register(cellType: PhotoMemoDetailCollectionViewCell.self)
+        detailCollectionView.delegate = self
+        detailCollectionView.dataSource = self
+        
+        layout.itemSize = self.view.bounds.size
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.sectionInset = .zero
+        
+        detailCollectionView.setCollectionViewLayout(layout, animated: false)
         
         self.navigationController?.isNavigationBarHidden = false
     
+        for i in 0..<100 {
+            let source = PhotoMemoDetailCollectionViewCellSource()
+            detailSources.append(source)
+        }
     }
 }
 
+extension PhotoMemoDetailViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(with: PhotoMemoDetailCollectionViewCell.self, for: indexPath)
+        cell.setup(source: detailSources[indexPath.item])
+        return cell
+    }
+    
+    
+}
 
 
 extension PhotoMemoDetailViewController: UITableViewDelegate,UITableViewDataSource {

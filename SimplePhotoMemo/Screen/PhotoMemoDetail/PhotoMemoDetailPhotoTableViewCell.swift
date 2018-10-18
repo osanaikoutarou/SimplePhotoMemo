@@ -14,5 +14,7 @@ class PhotoMemoDetailPhotoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        photoImageView.image = UIImage(named: "huukei1")
     }
 }

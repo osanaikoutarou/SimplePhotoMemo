@@ -276,12 +276,12 @@
 			isa = PBXGroup;
 			children = (
 				1EC3C77D21725F3B0080E0AE /* SlideMenu */,
-				1E98201C216E4643007194B5 /* PhotoMemoDetail */,
 				1E982011216D383B007194B5 /* AddPhotoMemo */,
 				1EA51AC3216D1447008E63E4 /* Group */,
 				1EA51ABE216D11FE008E63E4 /* Search */,
 				1EA51AB9216D0B4C008E63E4 /* Setting */,
 				DAD20C78216C90D3004CB68B /* PhotoMemoList */,
+				1E98201C216E4643007194B5 /* PhotoMemoDetail */,
 			);
 			path = Screen;
 			sourceTree = "<group>";

@@ -128,7 +128,7 @@ class TagsCollectionViewLayout: UICollectionViewFlowLayout {
     }
     
     
-    
+     
     // 引数で渡されたCGRectの範囲内に表示される要素のUICollectionViewLayoutAttributesの配列を返すメソッドです。
     // 一部分しか表示されていない要素もこのメソッドで返します。
     // このメソッドでの戻り値でUICollectionViewLayoutAttributesが返されない要素は画面上に表示されないことから、
