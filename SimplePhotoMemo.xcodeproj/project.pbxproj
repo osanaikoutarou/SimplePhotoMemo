@@ -13,14 +13,19 @@
 		1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98201A216D405C007194B5 /* KeyboardController.swift */; };
 		1E98201E216E46AB007194B5 /* PhotoMemoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E98201D216E46AB007194B5 /* PhotoMemoDetail.storyboard */; };
 		1E982020216E46EE007194B5 /* PhotoMemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */; };
-		1E982022216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982021216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift */; };
-		1E982024216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E982023216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift */; };
 		1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */; };
 		1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */; };
 		1EA51AC0216D130A008E63E4 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51ABF216D130A008E63E4 /* Search.storyboard */; };
 		1EA51AC2216D1327008E63E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC1216D1327008E63E4 /* SearchViewController.swift */; };
 		1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51AC4216D145F008E63E4 /* Group.storyboard */; };
 		1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC6216D146B008E63E4 /* GroupViewController.swift */; };
+		1EB7B25D2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B25C2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift */; };
+		1EB7B2602177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B25E2177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift */; };
+		1EB7B2612177999A00994882 /* PhotoMemoDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB7B25F2177999A00994882 /* PhotoMemoDetailCollectionViewCell.xib */; };
+		1EB7B26C2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */; };
+		1EB7B26D2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB7B26B2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.xib */; };
+		1EB7B2702177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B26E2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift */; };
+		1EB7B2712177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB7B26F2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.xib */; };
 		1EC3C77F21725F800080E0AE /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC3C77E21725F800080E0AE /* SlideMenu.storyboard */; };
 		1EC3C781217266CB0080E0AE /* BaseSlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C780217266CB0080E0AE /* BaseSlideMenuViewController.swift */; };
 		1EC3C78A217319370080E0AE /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3C789217319370080E0AE /* TagCollectionViewCell.swift */; };
@@ -99,7 +104,6 @@
 		DAFDB674217473BD00E4DEC4 /* LeftMenuTagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB671217473BC00E4DEC4 /* LeftMenuTagTableViewCell.swift */; };
 		DAFDB675217473BD00E4DEC4 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB672217473BC00E4DEC4 /* LeftMenuViewController.swift */; };
 		DAFDB677217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB676217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift */; };
-		DAFDB679217573DB00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB678217573DA00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift */; };
 		DAFDB67B2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB67A2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift */; };
 		DAFDB67D2175B3A000E4DEC4 /* PhotoMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFDB67C2175B3A000E4DEC4 /* PhotoMemo.swift */; };
 /* End PBXBuildFile section */
@@ -111,14 +115,19 @@
 		1E98201A216D405C007194B5 /* KeyboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
 		1E98201D216E46AB007194B5 /* PhotoMemoDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoMemoDetail.storyboard; sourceTree = "<group>"; };
 		1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailViewController.swift; sourceTree = "<group>"; };
-		1E982021216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailPhotoTableViewCell.swift; sourceTree = "<group>"; };
-		1E982023216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailMemoTableViewCell.swift; sourceTree = "<group>"; };
 		1EA51ABA216D0E1F008E63E4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1EA51ABC216D0E2C008E63E4 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		1EA51ABF216D130A008E63E4 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		1EA51AC1216D1327008E63E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1EA51AC4216D145F008E63E4 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
 		1EA51AC6216D146B008E63E4 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		1EB7B25C2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalPhotoMemoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		1EB7B25E2177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		1EB7B25F2177999A00994882 /* PhotoMemoDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoMemoDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailMemoTableViewCell.swift; sourceTree = "<group>"; };
+		1EB7B26B2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoMemoDetailMemoTableViewCell.xib; sourceTree = "<group>"; };
+		1EB7B26E2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		1EB7B26F2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoMemoDetailPhotoTableViewCell.xib; sourceTree = "<group>"; };
 		1EC3C77E21725F800080E0AE /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
 		1EC3C780217266CB0080E0AE /* BaseSlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlideMenuViewController.swift; sourceTree = "<group>"; };
 		1EC3C789217319370080E0AE /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -201,7 +210,6 @@
 		DAFDB671217473BC00E4DEC4 /* LeftMenuTagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTagTableViewCell.swift; sourceTree = "<group>"; };
 		DAFDB672217473BC00E4DEC4 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		DAFDB676217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePhotoMemoListCollectionViewCell.swift; sourceTree = "<group>"; };
-		DAFDB678217573DA00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NormalPhotoMemoListCollectionViewCell.swift; path = /Users/osanai/ios/SimplePhotoMemo/SimplePhotoMemo/Screen/PhotoMemoList/NormalPhotoMemoListCollectionViewCell.swift; sourceTree = "<absolute>"; };
 		DAFDB67A2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoThreePhotoMemoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		DAFDB67C2175B3A000E4DEC4 /* PhotoMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemo.swift; sourceTree = "<group>"; };
 		EFB01C9F54583600BA3F1EEA /* Pods_SimplePhotoMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplePhotoMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,10 +260,14 @@
 			children = (
 				1E98201D216E46AB007194B5 /* PhotoMemoDetail.storyboard */,
 				1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */,
-				1E982021216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift */,
-				1E982023216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift */,
 				DA15325721708C360068F195 /* PhotoMemoDetailSlide.storyboard */,
 				DA15325921708C580068F195 /* PhotoMemoDetailSlideViewController.swift */,
+				1EB7B25E2177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift */,
+				1EB7B25F2177999A00994882 /* PhotoMemoDetailCollectionViewCell.xib */,
+				1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */,
+				1EB7B26B2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.xib */,
+				1EB7B26E2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift */,
+				1EB7B26F2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.xib */,
 			);
 			path = PhotoMemoDetail;
 			sourceTree = "<group>";
@@ -433,7 +445,7 @@
 		DAD20C78216C90D3004CB68B /* PhotoMemoList */ = {
 			isa = PBXGroup;
 			children = (
-				DAFDB678217573DA00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift */,
+				1EB7B25C2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift */,
 				DAD20C79216C91B3004CB68B /* PhotoMemoList.storyboard */,
 				DAD20C7B216C9CC9004CB68B /* PhotoMemoListViewController.swift */,
 				DAD20C81216CA852004CB68B /* PhotoMemoListTableViewCell.swift */,
@@ -724,9 +736,11 @@
 			files = (
 				DAD20C71216C4150004CB68B /* LaunchScreen.storyboard in Resources */,
 				DA15325221707EE20068F195 /* HorizontalNavigationCollectionViewBase.xib in Resources */,
+				1EB7B26D2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.xib in Resources */,
 				DAD20C7A216C91B3004CB68B /* PhotoMemoList.storyboard in Resources */,
 				DA15325821708C360068F195 /* PhotoMemoDetailSlide.storyboard in Resources */,
 				1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */,
+				1EB7B2712177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.xib in Resources */,
 				DA15324E21707EE20068F195 /* CommonTitleTableViewCell.xib in Resources */,
 				DA15325121707EE20068F195 /* HorizontalNavigationCollectionViewCell.xib in Resources */,
 				DAD20C6E216C4150004CB68B /* Assets.xcassets in Resources */,
@@ -738,6 +752,7 @@
 				DAFDB66821743DBC00E4DEC4 /* Sandbox.storyboard in Resources */,
 				1EA51ABD216D0E2C008E63E4 /* Settings.storyboard in Resources */,
 				1E98201E216E46AB007194B5 /* PhotoMemoDetail.storyboard in Resources */,
+				1EB7B2612177999A00994882 /* PhotoMemoDetailCollectionViewCell.xib in Resources */,
 				1E982013216D3900007194B5 /* AddPhotoMemo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,6 +807,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB7B2702177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */,
 				DAD20CC2216CA8E0004CB68B /* UIView+.swift in Sources */,
 				DA15325421707EE20068F195 /* HorizontalNavigationCollectionViewBase.swift in Sources */,
 				DAD20CCF216CA8E0004CB68B /* Operator+.swift in Sources */,
@@ -809,10 +825,10 @@
 				1E982020216E46EE007194B5 /* PhotoMemoDetailViewController.swift in Sources */,
 				DA15324C21707EE20068F195 /* CommonTitleSmallTableViewCell.swift in Sources */,
 				DAD20CD7216CA8E0004CB68B /* Array+Safe.swift in Sources */,
+				1EB7B26C2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */,
 				DAD20CCD216CA8E0004CB68B /* NibInstantiatable.swift in Sources */,
 				DAD20CCA216CA8E0004CB68B /* Safe.swift in Sources */,
 				DAD20CC5216CA8E0004CB68B /* TargetedExtension.swift in Sources */,
-				1E982024216E642B007194B5 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */,
 				DAD20CDB216CA8E0004CB68B /* Int+Utility.swift in Sources */,
 				1EC3C79121732C710080E0AE /* TagModel.swift in Sources */,
 				DAFDB673217473BD00E4DEC4 /* TagTableViewCell.swift in Sources */,
@@ -836,11 +852,13 @@
 				DAD20CCC216CA8E0004CB68B /* UITableView+.swift in Sources */,
 				DAD20CE2216CA8E0004CB68B /* UIStoryboardSegue+Utility.swift in Sources */,
 				DAD20CDA216CA8E0004CB68B /* UICollectionView+Highlight.swift in Sources */,
+				1EB7B2602177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift in Sources */,
 				1E982017216D39C3007194B5 /* UIViewController+NavigationBar.swift in Sources */,
 				DAD20CD3216CA8E0004CB68B /* UIView+Border.swift in Sources */,
 				DAD20CCB216CA8E0004CB68B /* UIImage+.swift in Sources */,
 				DA15324A21707EE20068F195 /* ShadowView.swift in Sources */,
 				DA15323621707E770068F195 /* UIView+Shadow.swift in Sources */,
+				1EB7B25D2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */,
 				DAD20CD2216CA8E0004CB68B /* UIView+Corner.swift in Sources */,
 				DAFDB674217473BD00E4DEC4 /* LeftMenuTagTableViewCell.swift in Sources */,
 				1EA51AC2216D1327008E63E4 /* SearchViewController.swift in Sources */,
@@ -852,7 +870,6 @@
 				DAFDB67D2175B3A000E4DEC4 /* PhotoMemo.swift in Sources */,
 				DAD20CCE216CA8E0004CB68B /* UIApplication+.swift in Sources */,
 				DAD20CE1216CA8E0004CB68B /* String+Utility.swift in Sources */,
-				1E982022216E61FF007194B5 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */,
 				DAFDB66A21743DC700E4DEC4 /* SandboxViewController.swift in Sources */,
 				1EA51ABB216D0E1F008E63E4 /* SettingsViewController.swift in Sources */,
 				DAFDB677217573BD00E4DEC4 /* LargePhotoMemoListCollectionViewCell.swift in Sources */,
@@ -867,7 +884,6 @@
 				DAD20C80216CA5CC004CB68B /* LineSpacingLabel.swift in Sources */,
 				DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */,
 				DAD20CD9216CA8E0004CB68B /* CGPoint+Utility.swift in Sources */,
-				DAFDB679217573DB00E4DEC4 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */,
 				DA15325521707EE20068F195 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

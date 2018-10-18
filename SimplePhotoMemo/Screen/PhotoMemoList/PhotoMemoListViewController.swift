@@ -80,6 +80,9 @@ extension PhotoMemoListViewController: UICollectionViewDelegate,UICollectionView
         cell.setup(photoMemo: PhotoMemo())
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "PhotoMemoDetail", sender: nil)
+    }
 }
 
 //extension PhotoMemoListViewController: UITableViewDelegate,UITableViewDataSource {

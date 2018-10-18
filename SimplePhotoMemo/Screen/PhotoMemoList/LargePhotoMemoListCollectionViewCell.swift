@@ -17,5 +17,6 @@ class LargePhotoMemoListCollectionViewCell: UICollectionViewCell {
     
     func setup(photoMemo:PhotoMemo) {
         imageView.image = UIImage(named: "huukei1")
+        imageView.corner(radius: 10)
     }
 }
