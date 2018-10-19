@@ -341,10 +341,10 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHF-aS-iXs">
-                                <rect key="frame" x="20" y="1548" width="50" height="50"/>
+                                <rect key="frame" x="20" y="1298" width="50" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNF-JJ-AGr" customClass="ButtonView" customModule="SimplePhotoMemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="250" width="50" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-6D-SiX">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -360,14 +360,90 @@
                                             <action selector="tappedAddButton:" destination="UFf-jE-va9" eventType="touchUpInside" id="lSD-qV-aIA"/>
                                         </connections>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NgN-F9-Zy0">
+                                        <rect key="frame" x="0.0" y="35" width="50" height="190"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-O2-DQs" customClass="ButtonView" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmO-hH-VUr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_layout1" translatesAutoresizingMaskIntoConstraints="NO" id="qDs-oW-wHR">
+                                                                <rect key="frame" x="12.5" y="12.5" width="25" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="25" id="Ewa-gE-Dgx"/>
+                                                                    <constraint firstAttribute="width" constant="25" id="YHR-yS-Cir"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="1" green="0.38823529410000002" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="qDs-oW-wHR" firstAttribute="centerX" secondItem="tmO-hH-VUr" secondAttribute="centerX" id="Jh1-5I-J4x"/>
+                                                            <constraint firstItem="qDs-oW-wHR" firstAttribute="centerY" secondItem="tmO-hH-VUr" secondAttribute="centerY" id="zRb-q7-l6c"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="0xV-VB-1Tx"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Aig-UI-c5A"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tmO-hH-VUr" secondAttribute="bottom" id="QH2-y6-O6H"/>
+                                                    <constraint firstItem="tmO-hH-VUr" firstAttribute="top" secondItem="rfd-O2-DQs" secondAttribute="top" id="XXp-wZ-EQy"/>
+                                                    <constraint firstItem="tmO-hH-VUr" firstAttribute="leading" secondItem="rfd-O2-DQs" secondAttribute="leading" id="eKw-hP-9us"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tmO-hH-VUr" secondAttribute="trailing" id="hkl-Zs-Jvg"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="tappedAddButton:" destination="UFf-jE-va9" eventType="touchUpInside" id="Ial-tc-kB0"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-2L-116" customClass="ButtonView" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-ad-6ci">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="PUD-eY-Hn8"/>
+                                                    <constraint firstAttribute="width" constant="50" id="roo-Gx-Hyy"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="tappedAddButton:" destination="UFf-jE-va9" eventType="touchUpInside" id="72i-4t-g48"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Znq-V6-nO2" customClass="ButtonView" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="140" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="OHI-18-obY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6A5-g8-ptV"/>
+                                                    <constraint firstAttribute="height" constant="50" id="EGY-cf-tFz"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="tappedAddButton:" destination="UFf-jE-va9" eventType="touchUpInside" id="lks-cV-Cgy"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="9Lc-kk-R1A"/>
+                                    <constraint firstAttribute="height" constant="300" id="9Lc-kk-R1A"/>
                                     <constraint firstAttribute="trailing" secondItem="SNF-JJ-AGr" secondAttribute="trailing" id="EXD-gz-g3F"/>
                                     <constraint firstAttribute="bottom" secondItem="SNF-JJ-AGr" secondAttribute="bottom" id="LqT-rl-Ze9"/>
+                                    <constraint firstItem="NgN-F9-Zy0" firstAttribute="leading" secondItem="ZHF-aS-iXs" secondAttribute="leading" id="Vxq-Th-8B8"/>
                                     <constraint firstItem="SNF-JJ-AGr" firstAttribute="leading" secondItem="ZHF-aS-iXs" secondAttribute="leading" id="b4c-q0-ZDh"/>
                                     <constraint firstAttribute="width" constant="50" id="hoz-tm-swl"/>
+                                    <constraint firstItem="SNF-JJ-AGr" firstAttribute="top" secondItem="NgN-F9-Zy0" secondAttribute="bottom" constant="25" id="nuS-AT-j7M"/>
+                                    <constraint firstAttribute="trailing" secondItem="NgN-F9-Zy0" secondAttribute="trailing" id="pV3-9S-kSz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -395,6 +471,7 @@
                         <outlet property="addButton" destination="feQ-fe-k7o" id="ynm-5y-DZQ"/>
                         <outlet property="itemCollectioinView" destination="v5L-wV-kY3" id="dtU-oA-oIm"/>
                         <outlet property="itemTableView" destination="HQc-Qz-OZ8" id="hty-DQ-LQv"/>
+                        <outlet property="layoutButton3" destination="rfd-O2-DQs" id="shU-Wr-PTk"/>
                         <segue destination="T92-fc-Kzp" kind="showDetail" identifier="AddPhotoMemo" id="1Dd-yh-YEn"/>
                         <segue destination="OrO-Yu-XRG" kind="show" identifier="PhotoMemoDetail" id="lN8-sZ-8Ax"/>
                     </connections>
@@ -443,5 +520,6 @@
     <resources>
         <image name="add" width="33" height="33"/>
         <image name="huukei1" width="3024" height="4032"/>
+        <image name="icon_layout1" width="33" height="33"/>
     </resources>
 </document>

@@ -15,6 +15,9 @@ class PhotoMemoListViewController: UIViewController {
     @IBOutlet weak var itemCollectioinView: UICollectionView!
     @IBOutlet weak var addButton: ButtonView!
     
+    @IBOutlet weak var layoutButton3: ButtonView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         itemCollectioinView.delegate = self
@@ -23,6 +26,9 @@ class PhotoMemoListViewController: UIViewController {
 //        itemTableView.dataSource = self
         
 //        self.navigationController?.hidesBarsOnSwipe = true
+        
+        layoutButton3.circle()
+        layoutButton3.setup(type: .darkerTheWhole)
         
         addMenuButton()
     }
