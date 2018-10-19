@@ -47,6 +47,7 @@ class PhotoMemoDetailViewController: UIViewController {
         
     
     }
+    
 }
 
 extension PhotoMemoDetailViewController: UICollectionViewDelegate,UICollectionViewDataSource {

@@ -15,8 +15,18 @@ class PhotoMemoListViewController: UIViewController {
     @IBOutlet weak var itemCollectioinView: UICollectionView!
     @IBOutlet weak var addButton: ButtonView!
     
-    @IBOutlet weak var layoutButton3: ButtonView!
+    @IBOutlet weak var layoutToggleButton: ToggleButtonView!
+    @IBOutlet var layoutButton1: ButtonView!
+    @IBOutlet var layoutButton2: ButtonView!
+    @IBOutlet var layoutButton3: ButtonView!
     
+    enum LayoutState {
+        case tile
+        case line
+        case large
+    }
+    
+    var layoutState:LayoutState = .large
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +37,37 @@ class PhotoMemoListViewController: UIViewController {
         
 //        self.navigationController?.hidesBarsOnSwipe = true
         
-        layoutButton3.circle()
-        layoutButton3.setup(type: .darkerTheWhole)
+//        layoutButton3.circle()
+//        layoutButton3.setup(type: .darkerTheWhole)
         
         addMenuButton()
+        
+        setupLayoutButton()
+        
+    }
+    
+    func setupLayoutButton() {
+        layoutButton1.setup(type: .darkerTheWhole)
+        layoutButton2.setup(type: .darkerTheWhole)
+        layoutButton3.setup(type: .darkerTheWhole)
+        layoutToggleButton.addButtonState(value: ToggleButtonView.State(identifier: "layout1", buttonView: layoutButton1))
+        layoutToggleButton.addButtonState(value: ToggleButtonView.State(identifier: "layout2", buttonView: layoutButton2))
+        layoutToggleButton.addButtonState(value: ToggleButtonView.State(identifier: "layout3", buttonView: layoutButton3))
+        layoutToggleButton.setup()
+        layoutToggleButton.circle()
+        
+        layoutToggleButton.didChangeState = { state in
+            if state.identifier == "layout1" {
+                self.layoutState = .large
+            }
+            if state.identifier == "layout2" {
+                self.layoutState = .line
+            }
+            if state.identifier == "layout3" {
+                self.layoutState = .tile
+            }
+            self.itemCollectioinView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +76,8 @@ class PhotoMemoListViewController: UIViewController {
         if let navigationController = navigationController as? ScrollingNavigationController {
             navigationController.followScrollView(self.itemTableView, delay: 100.0)
         }
+        
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -67,9 +106,15 @@ extension PhotoMemoListViewController {
 
 extension PhotoMemoListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return LargePhotoMemoListCollectionViewCell.cellSize
-//        return NormalPhotoMemoListCollectionViewCell.cellSize
-        return PhotoThreePhotoMemoListCollectionViewCell.cellSize
+        
+        switch layoutState {
+        case .tile:
+            return PhotoThreePhotoMemoListCollectionViewCell.cellSize
+        case .line:
+            return NormalPhotoMemoListCollectionViewCell.cellSize
+        case .large:
+            return LargePhotoMemoListCollectionViewCell.cellSize
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
@@ -84,11 +129,21 @@ extension PhotoMemoListViewController: UICollectionViewDelegate,UICollectionView
         return 100
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(with: LargePhotoMemoListCollectionViewCell.self, for: indexPath)
-//        let cell = collectionView.dequeueReusableCell(with: NormalPhotoMemoListCollectionViewCell.self, for: indexPath)
-        let cell = collectionView.dequeueReusableCell(with: PhotoThreePhotoMemoListCollectionViewCell.self, for: indexPath)
-        cell.setup(photoMemo: PhotoMemo())
-        return cell
+        
+        switch layoutState {
+        case .tile:
+            let cell = collectionView.dequeueReusableCell(with: PhotoThreePhotoMemoListCollectionViewCell.self, for: indexPath)
+            cell.setup(photoMemo: PhotoMemo())
+            return cell
+        case .line:
+            let cell = collectionView.dequeueReusableCell(with: NormalPhotoMemoListCollectionViewCell.self, for: indexPath)
+            cell.setup(photoMemo: PhotoMemo())
+            return cell
+        case .large:
+            let cell = collectionView.dequeueReusableCell(with: LargePhotoMemoListCollectionViewCell.self, for: indexPath)
+            cell.setup(photoMemo: PhotoMemo())
+            return cell
+        }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "PhotoMemoDetail", sender: nil)

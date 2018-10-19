@@ -51,6 +51,7 @@
 		DA15325521707EE20068F195 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15324721707EE10068F195 /* ButtonView.swift */; };
 		DA15325821708C360068F195 /* PhotoMemoDetailSlide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA15325721708C360068F195 /* PhotoMemoDetailSlide.storyboard */; };
 		DA15325A21708C580068F195 /* PhotoMemoDetailSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15325921708C580068F195 /* PhotoMemoDetailSlideViewController.swift */; };
+		DA4299A52179715B00394E65 /* ToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4299A42179715B00394E65 /* ToggleButtonView.swift */; };
 		DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C66216C4146004CB68B /* AppDelegate.swift */; };
 		DAD20C69216C4146004CB68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C68216C4146004CB68B /* ViewController.swift */; };
 		DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD20C6A216C4147004CB68B /* Main.storyboard */; };
@@ -154,6 +155,7 @@
 		DA15324721707EE10068F195 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		DA15325721708C360068F195 /* PhotoMemoDetailSlide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoMemoDetailSlide.storyboard; sourceTree = "<group>"; };
 		DA15325921708C580068F195 /* PhotoMemoDetailSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailSlideViewController.swift; sourceTree = "<group>"; };
+		DA4299A42179715B00394E65 /* ToggleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonView.swift; sourceTree = "<group>"; };
 		DAD20C63216C4146004CB68B /* SimplePhotoMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePhotoMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD20C66216C4146004CB68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD20C68216C4146004CB68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				DA15323B21707EE10068F195 /* TableViewCell */,
 				DA15324221707EE10068F195 /* HorizontalNavigationCollectionViewBase */,
 				DA15324721707EE10068F195 /* ButtonView.swift */,
+				DA4299A42179715B00394E65 /* ToggleButtonView.swift */,
 			);
 			path = GeneralView;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4299A52179715B00394E65 /* ToggleButtonView.swift in Sources */,
 				1EB7B2702177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */,
 				DAD20CC2216CA8E0004CB68B /* UIView+.swift in Sources */,
 				DA15325421707EE20068F195 /* HorizontalNavigationCollectionViewBase.swift in Sources */,
