@@ -66,7 +66,9 @@ class PhotoMemoListViewController: UIViewController {
             if state.identifier == "layout3" {
                 self.layoutState = .tile
             }
+            
             self.itemCollectioinView.reloadData()
+            
         }
     }
     
@@ -134,14 +136,26 @@ extension PhotoMemoListViewController: UICollectionViewDelegate,UICollectionView
         case .tile:
             let cell = collectionView.dequeueReusableCell(with: PhotoThreePhotoMemoListCollectionViewCell.self, for: indexPath)
             cell.setup(photoMemo: PhotoMemo())
+            cell.alpha = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.alpha = 1
+            })
             return cell
         case .line:
             let cell = collectionView.dequeueReusableCell(with: NormalPhotoMemoListCollectionViewCell.self, for: indexPath)
             cell.setup(photoMemo: PhotoMemo())
+            cell.alpha = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.alpha = 1
+            })
             return cell
         case .large:
             let cell = collectionView.dequeueReusableCell(with: LargePhotoMemoListCollectionViewCell.self, for: indexPath)
             cell.setup(photoMemo: PhotoMemo())
+            cell.alpha = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                cell.alpha = 1
+            })
             return cell
         }
     }
