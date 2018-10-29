@@ -16,8 +16,8 @@ class PhotoMemoDetailCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        tableView.register(cellType: PhotoMemoDetailMemoTableViewCell.self)
-        tableView.register(cellType: PhotoMemoDetailPhotoTableViewCell.self)
+//        tableView.register(cellType: PhotoMemoDetailMemoTableViewCell.self)
+//        tableView.register(cellType: PhotoMemoDetailPhotoTableViewCell.self)
         
     }
     

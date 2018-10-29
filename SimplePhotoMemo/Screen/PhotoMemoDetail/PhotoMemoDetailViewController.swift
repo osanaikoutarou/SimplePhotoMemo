@@ -23,7 +23,7 @@ class PhotoMemoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailCollectionView.register(cellType: PhotoMemoDetailCollectionViewCell.self)
+//        detailCollectionView.register(cellType: PhotoMemoDetailCollectionViewCell.self)
         detailCollectionView.delegate = self
         detailCollectionView.dataSource = self
 
