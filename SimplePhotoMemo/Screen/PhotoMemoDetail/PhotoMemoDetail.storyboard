@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="etE-KJ-NR7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <prototypes>
                                                         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoMemoDetailPhotoTableViewCell" rowHeight="252" id="38a-YP-OeM" customClass="PhotoMemoDetailPhotoTableViewCell" customModule="SimplePhotoMemo" customModuleProvider="target">
@@ -62,8 +62,16 @@
                                                                 <outlet property="photoImageView" destination="6Ni-XT-eJb" id="AlG-v8-Jzb"/>
                                                             </connections>
                                                         </tableViewCell>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="W5Y-3U-54n">
+                                                            <rect key="frame" x="0.0" y="280" width="375" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W5Y-3U-54n" id="mPq-D5-l9W">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </tableViewCellContentView>
+                                                        </tableViewCell>
                                                         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoMemoDetailMemoTableViewCell" rowHeight="111" id="bEb-Z1-wLr" customClass="PhotoMemoDetailMemoTableViewCell" customModule="SimplePhotoMemo" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="280" width="375" height="111"/>
+                                                            <rect key="frame" x="0.0" y="324" width="375" height="111"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bEb-Z1-wLr" id="q1j-l0-a1O">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
