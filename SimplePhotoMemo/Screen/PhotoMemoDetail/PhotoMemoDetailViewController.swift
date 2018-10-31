@@ -10,11 +10,12 @@ import UIKit
 
 class PhotoMemoDetailViewController: UIViewController {
     
-    enum CellType {
+    enum SectionType {
         case photo
+        case tags
         case memo
     }
-    let cellTypes:[CellType] = [.photo,.memo]
+    let sectionTypes:[SectionType] = [.photo,.tags,.memo]
     var detailSources:[PhotoMemoDetailCollectionViewCellSource] = []
     let layout = UICollectionViewFlowLayout()
     
@@ -33,6 +34,8 @@ class PhotoMemoDetailViewController: UIViewController {
         }
 
         self.navigationController?.isNavigationBarHidden = false
+        
+        setupTagsCell()
     }
     
     override func viewWillLayoutSubviews() {
@@ -48,8 +51,29 @@ class PhotoMemoDetailViewController: UIViewController {
     
     }
     
+    // tagsのcellのsource
+    let photoMemoDetailTagsTableViewCellSource = PhotoMemoDetailTagsTableViewCellSource()
+    
+    func setupTagsCell() {
+        
+        // 仮データ
+        let t1 = TagModel()
+        t1.tag = "あいうえおかきくけこ"
+        let t2 = TagModel()
+        t2.tag = "アニメ"
+        let t3 = TagModel()
+        t3.tag = "観光"
+        let t4 = TagModel()
+        t4.tag = "ビジネス"
+        let t5 = TagModel()
+        t5.tag = "東京特許許可局許可局長"
+        
+        photoMemoDetailTagsTableViewCellSource.setup(tagModels: [t1,t2,t3,t4,t5,t1,t2,t3,t4,t5,])
+        
+    }
 }
 
+// 横
 extension PhotoMemoDetailViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
@@ -64,20 +88,29 @@ extension PhotoMemoDetailViewController: UICollectionViewDelegate,UICollectionVi
     
 }
 
-
+// 縦
 extension PhotoMemoDetailViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionTypes.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellTypes.count
+        // 一旦1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellType = cellTypes[indexPath.row]
+        let sectionType = sectionTypes[indexPath.section]
         
-        switch cellType {
+        switch sectionType {
         case .photo:
             let cell = tableView.dequeueReusableCell(with: PhotoMemoDetailPhotoTableViewCell.self, for: indexPath)
             return cell
-        default:
+        case .tags:
+            let cell = tableView.dequeueReusableCell(with: PhotoMemoDetailTagsTableViewCell.self, for: indexPath)
+            cell.setup(source: photoMemoDetailTagsTableViewCellSource)
+            return cell
+        case .memo:
             let cell = tableView.dequeueReusableCell(with: PhotoMemoDetailMemoTableViewCell.self, for: indexPath)
             return cell
         }

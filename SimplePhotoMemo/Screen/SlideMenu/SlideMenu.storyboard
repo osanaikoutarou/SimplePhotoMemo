@@ -189,7 +189,8 @@ vIjloLTmiYDjgIHopIflkIjvvIkN6Kit5a6a44G444Gu5bCO57eaA
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-GY-876">
                                                     <rect key="frame" x="15" y="4" width="69.5" height="36.5"/>
-                                                    <string key="text">tagnametagname</string>
+                                                    <string key="text">tagname
+tagname</string>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

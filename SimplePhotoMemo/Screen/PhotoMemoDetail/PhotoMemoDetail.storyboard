@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Photo Memo Detail View Controller-->
         <scene sceneID="TOq-S0-gt6">
@@ -62,16 +67,67 @@
                                                                 <outlet property="photoImageView" destination="6Ni-XT-eJb" id="AlG-v8-Jzb"/>
                                                             </connections>
                                                         </tableViewCell>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="W5Y-3U-54n">
-                                                            <rect key="frame" x="0.0" y="280" width="375" height="44"/>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoMemoDetailTagsTableViewCell" rowHeight="204" id="W5Y-3U-54n" customClass="PhotoMemoDetailTagsTableViewCell" customModule="SimplePhotoMemo" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="280" width="375" height="204"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W5Y-3U-54n" id="mPq-D5-l9W">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="203.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-4i-Hki">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="203.5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="203.5" id="PCE-C5-Q4k"/>
+                                                                        </constraints>
+                                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hEp-bb-7vF">
+                                                                            <size key="itemSize" width="156" height="82"/>
+                                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                        </collectionViewFlowLayout>
+                                                                        <cells>
+                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoMemoDetailTagCollectionViewCell" id="EDC-Km-y4Z" customClass="PhotoMemoDetailTagCollectionViewCell">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="156" height="82"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="156" height="82"/>
+                                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpN-Zb-cRc">
+                                                                                            <rect key="frame" x="10" y="5" width="136" height="72"/>
+                                                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </view>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="trailing" secondItem="wpN-Zb-cRc" secondAttribute="trailing" constant="10" id="Djn-nt-iJC"/>
+                                                                                    <constraint firstItem="wpN-Zb-cRc" firstAttribute="top" secondItem="EDC-Km-y4Z" secondAttribute="top" constant="5" id="JWe-8e-Tpq"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="wpN-Zb-cRc" secondAttribute="bottom" constant="5" id="TBy-Kx-amI"/>
+                                                                                    <constraint firstItem="wpN-Zb-cRc" firstAttribute="leading" secondItem="EDC-Km-y4Z" secondAttribute="leading" constant="10" id="zU5-am-kLR"/>
+                                                                                </constraints>
+                                                                                <connections>
+                                                                                    <outlet property="tagLabel" destination="wpN-Zb-cRc" id="z6N-KM-bhd"/>
+                                                                                </connections>
+                                                                            </collectionViewCell>
+                                                                        </cells>
+                                                                    </collectionView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="KWj-4i-Hki" firstAttribute="leading" secondItem="mPq-D5-l9W" secondAttribute="leading" id="3NO-8J-iII"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="KWj-4i-Hki" secondAttribute="trailing" id="b0g-0Y-vcl"/>
+                                                                    <constraint firstItem="KWj-4i-Hki" firstAttribute="top" secondItem="mPq-D5-l9W" secondAttribute="top" id="nVW-AP-56v"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="KWj-4i-Hki" secondAttribute="bottom" id="uYs-rw-6HO"/>
+                                                                </constraints>
                                                             </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="collectionView" destination="KWj-4i-Hki" id="SrN-ZX-60n"/>
+                                                            </connections>
                                                         </tableViewCell>
                                                         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoMemoDetailMemoTableViewCell" rowHeight="111" id="bEb-Z1-wLr" customClass="PhotoMemoDetailMemoTableViewCell" customModule="SimplePhotoMemo" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="324" width="375" height="111"/>
+                                                            <rect key="frame" x="0.0" y="484" width="375" height="111"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bEb-Z1-wLr" id="q1j-l0-a1O">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
