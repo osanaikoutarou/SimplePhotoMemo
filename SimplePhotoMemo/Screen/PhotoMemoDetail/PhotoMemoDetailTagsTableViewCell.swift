@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 詳細タグのCell
 class PhotoMemoDetailTagsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,19 +17,22 @@ class PhotoMemoDetailTagsTableViewCell: UITableViewCell {
         super.awakeFromNib()        
     }
     
-    func setup(source:PhotoMemoDetailTagsTableViewCellSource) {
-        setupLayout(tagModels: source.tagModels)
+    func setup(source:TagsCollectionViewSource) {
+        
         
         collectionView.delegate = source
         collectionView.dataSource = source
         collectionView.reloadData()
+        
+        setupLayout(tagModels: source.tagModels)
     }
 
     func setupLayout(tagModels:[TagModel]) {
         let layout = TagsCollectionViewLayout()
         
         var cellSizes:[CGSize] = []
-        let dummyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoMemoDetailTagCollectionViewCell", for: IndexPath(row: 0, section: 0)) as! PhotoMemoDetailTagCollectionViewCell
+        let dummyCell = PhotoMemoDetailTagCollectionViewCell(frame: self.bounds)
+//        let dummyCell = collectionView.dequeueReusableCell(with: PhotoMemoDetailTagCollectionViewCell.self, for: IndexPath(row: 0, section: 0))
         
         tagModels.forEach { (tagModel) in
             // cellの期待width
@@ -37,6 +41,13 @@ class PhotoMemoDetailTagsTableViewCell: UITableViewCell {
             // cellの期待Size
             cellSizes.append(CGSize(width: expectedCellWidth + PhotoMemoDetailTagCollectionViewCell.inset.left + PhotoMemoDetailTagCollectionViewCell.inset.right,
                                     height: dummyCell.tagLabel.height + PhotoMemoDetailTagCollectionViewCell.inset.top + PhotoMemoDetailTagCollectionViewCell.inset.bottom))
+            
+//            // cellの期待width
+//            let expectedCellWidth = tagModel.tag.width(withConstrainedHeight: 10,
+//                                                       font: UIFont.systemFont(ofSize: 10))
+//            // cellの期待Size
+//            cellSizes.append(CGSize(width: expectedCellWidth + PhotoMemoDetailTagCollectionViewCell.inset.left + PhotoMemoDetailTagCollectionViewCell.inset.right,
+//                                    height: 10 + PhotoMemoDetailTagCollectionViewCell.inset.top + PhotoMemoDetailTagCollectionViewCell.inset.bottom))
         }
         
         layout.setup(cellSizes: cellSizes, collectionViewWidth: collectionView.width, horizontalMargin: 10, verticalMargin: 10, collectionViewInset: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
@@ -45,7 +56,8 @@ class PhotoMemoDetailTagsTableViewCell: UITableViewCell {
     }
 }
 
-class PhotoMemoDetailTagsTableViewCellSource: NSObject, UICollectionViewDelegate,UICollectionViewDataSource {
+// タグのソース
+class TagsCollectionViewSource: NSObject, UICollectionViewDelegate,UICollectionViewDataSource {
     
     var tagModels:[TagModel] = []
     
