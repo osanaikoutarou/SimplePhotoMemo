@@ -11,24 +11,27 @@ import UIKit
 // Detail
 //   - 横CollectionViewのCell
 //       - TableView（1個のDetail）
-class PhotoMemoDetailCollectionViewCell: UICollectionViewCell {
+class PhotoMemoDetailHorizontalCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var photoMemoDetailTableView: UITableView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func setup(source:DetailTableViewSource) {
+    func setup(source:PhotoMemoDetailTableViewSource) {
         source.setupTagsCell()
         
-        tableView.delegate = source
-        tableView.dataSource = source
+        photoMemoDetailTableView.rowHeight = UITableViewAutomaticDimension
+        photoMemoDetailTableView.estimatedRowHeight = 50
+
+        photoMemoDetailTableView.delegate = source
+        photoMemoDetailTableView.dataSource = source        
     }
     
 }
 
-class DetailTableViewSource:NSObject, UITableViewDelegate,UITableViewDataSource {
+class PhotoMemoDetailTableViewSource:NSObject, UITableViewDelegate,UITableViewDataSource {
     
     enum SectionType {
         case photo
@@ -55,10 +58,7 @@ class DetailTableViewSource:NSObject, UITableViewDelegate,UITableViewDataSource 
         t5.tag = "東京特許許可局許可局長"
         
         tagsCollectionViewSource.setup(tagModels: [t1,t2,t3,t4,t5,t1,t2,t3,t4,t5,])
-        
     }
-
-    
     
     
     
@@ -71,6 +71,8 @@ class DetailTableViewSource:NSObject, UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionType = sectionTypes[indexPath.section]
         
+        print("😚 \(tableView.bounds)")
+        
         switch sectionType {
         case .photo:
             let cell = tableView.dequeueReusableCell(with: PhotoMemoDetailPhotoTableViewCell.self, for: indexPath)
@@ -78,6 +80,7 @@ class DetailTableViewSource:NSObject, UITableViewDelegate,UITableViewDataSource 
         case .tags:
             let cell = tableView.dequeueReusableCell(with: PhotoMemoDetailTagsTableViewCell.self, for: indexPath)
             cell.setup(source: tagsCollectionViewSource)
+            cell.layoutIfNeeded()
             return cell
         case .memo:
             let cell = tableView.dequeueReusableCell(with: PhotoMemoDetailMemoTableViewCell.self, for: indexPath)

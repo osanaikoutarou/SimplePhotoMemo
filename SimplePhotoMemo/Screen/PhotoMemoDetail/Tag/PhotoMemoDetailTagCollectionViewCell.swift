@@ -17,7 +17,8 @@ class PhotoMemoDetailTagCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.cornerRadius = self.bounds.height/2.0
-        self.clipsToBounds = true
+        self.corner(radius: self.bounds.height/2)
+        self.backgroundColor = UIColor.groupTableViewBackground
+
     }
 }

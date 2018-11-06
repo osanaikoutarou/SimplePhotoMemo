@@ -20,7 +20,7 @@
 		1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51AC4216D145F008E63E4 /* Group.storyboard */; };
 		1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC6216D146B008E63E4 /* GroupViewController.swift */; };
 		1EB7B25D2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B25C2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift */; };
-		1EB7B2602177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B25E2177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift */; };
+		1EB7B2602177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B25E2177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift */; };
 		1EB7B26C2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */; };
 		1EB7B2702177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B26E2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift */; };
 		1EC3C77F21725F800080E0AE /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC3C77E21725F800080E0AE /* SlideMenu.storyboard */; };
@@ -122,7 +122,7 @@
 		1EA51AC4216D145F008E63E4 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
 		1EA51AC6216D146B008E63E4 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		1EB7B25C2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalPhotoMemoListCollectionViewCell.swift; sourceTree = "<group>"; };
-		1EB7B25E2177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		1EB7B25E2177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailMemoTableViewCell.swift; sourceTree = "<group>"; };
 		1EB7B26E2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		1EC3C77E21725F800080E0AE /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 				1E98201F216E46EE007194B5 /* PhotoMemoDetailViewController.swift */,
 				DA15325721708C360068F195 /* PhotoMemoDetailSlide.storyboard */,
 				DA15325921708C580068F195 /* PhotoMemoDetailSlideViewController.swift */,
-				1EB7B25E2177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift */,
+				1EB7B25E2177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift */,
 				1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */,
 				1EB7B26E2177A12500994882 /* PhotoMemoDetailPhotoTableViewCell.swift */,
 				1EDFF01521896925001856DC /* PhotoMemoDetailTagsTableViewCell.swift */,
@@ -859,7 +859,7 @@
 				DAD20CCC216CA8E0004CB68B /* UITableView+.swift in Sources */,
 				DAD20CE2216CA8E0004CB68B /* UIStoryboardSegue+Utility.swift in Sources */,
 				DAD20CDA216CA8E0004CB68B /* UICollectionView+Highlight.swift in Sources */,
-				1EB7B2602177999A00994882 /* PhotoMemoDetailCollectionViewCell.swift in Sources */,
+				1EB7B2602177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift in Sources */,
 				1E982017216D39C3007194B5 /* UIViewController+NavigationBar.swift in Sources */,
 				DAD20CD3216CA8E0004CB68B /* UIView+Border.swift in Sources */,
 				DAD20CCB216CA8E0004CB68B /* UIImage+.swift in Sources */,

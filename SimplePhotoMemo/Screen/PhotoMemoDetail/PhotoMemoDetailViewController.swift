@@ -10,20 +10,19 @@ import UIKit
 
 class PhotoMemoDetailViewController: UIViewController {
 
-    var detailSources:[DetailTableViewSource] = []
-    let layout = UICollectionViewFlowLayout()
+    var detailSources:[PhotoMemoDetailTableViewSource] = []
+    let horizontalCollectionViewLayout = UICollectionViewFlowLayout()
     
-    @IBOutlet weak var detailCollectionView: UICollectionView!
+    @IBOutlet weak var detailHorizontalCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        detailCollectionView.register(cellType: PhotoMemoDetailCollectionViewCell.self)
-        detailCollectionView.delegate = self
-        detailCollectionView.dataSource = self
+        detailHorizontalCollectionView.delegate = self
+        detailHorizontalCollectionView.dataSource = self
 
         for i in 0..<100 {
-            let source = DetailTableViewSource()
+            let source = PhotoMemoDetailTableViewSource()
             detailSources.append(source)
         }
 
@@ -32,15 +31,20 @@ class PhotoMemoDetailViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        layout.itemSize = detailCollectionView.frame.size
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        layout.sectionInset = .zero
-        
-        detailCollectionView.setCollectionViewLayout(layout, animated: false)
-        
+        setupLayout()
+        detailHorizontalCollectionView.reloadData()
+    }
     
+    func setupLayout() {
+        self.view.layoutSubviews()
+        horizontalCollectionViewLayout.itemSize = detailHorizontalCollectionView.frame.size
+        print("😑 \(detailHorizontalCollectionView.frame)")
+        horizontalCollectionViewLayout.scrollDirection = .horizontal
+        horizontalCollectionViewLayout.minimumLineSpacing = 0
+        horizontalCollectionViewLayout.minimumInteritemSpacing = 0
+        horizontalCollectionViewLayout.sectionInset = .zero
+        
+        detailHorizontalCollectionView.setCollectionViewLayout(horizontalCollectionViewLayout, animated: false)
     }
         
 }
@@ -52,11 +56,11 @@ extension PhotoMemoDetailViewController: UICollectionViewDelegate,UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(with: PhotoMemoDetailCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(with: PhotoMemoDetailHorizontalCollectionViewCell.self, for: indexPath)
+        cell.layoutIfNeeded()
         cell.setup(source: detailSources[indexPath.item])
         return cell
     }
-    
     
 }
 

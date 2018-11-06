@@ -12,13 +12,13 @@ import UIKit
 class PhotoMemoDetailTagsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cellHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
-        super.awakeFromNib()        
+        super.awakeFromNib()
     }
     
     func setup(source:TagsCollectionViewSource) {
-        
         
         collectionView.delegate = source
         collectionView.dataSource = source
@@ -31,16 +31,18 @@ class PhotoMemoDetailTagsTableViewCell: UITableViewCell {
         let layout = TagsCollectionViewLayout()
         
         var cellSizes:[CGSize] = []
-        let dummyCell = PhotoMemoDetailTagCollectionViewCell(frame: self.bounds)
-//        let dummyCell = collectionView.dequeueReusableCell(with: PhotoMemoDetailTagCollectionViewCell.self, for: IndexPath(row: 0, section: 0))
+//        let dummyCell = PhotoMemoDetailTagCollectionViewCell(frame: self.bounds)
+        let dummyCell = collectionView.dequeueReusableCell(with: PhotoMemoDetailTagCollectionViewCell.self, for: IndexPath(row: 0, section: 0))
         
         tagModels.forEach { (tagModel) in
             // cellの期待width
             let expectedCellWidth = tagModel.tag.width(withConstrainedHeight: dummyCell.tagLabel.height,
                                                        font: dummyCell.tagLabel.font)
             // cellの期待Size
-            cellSizes.append(CGSize(width: expectedCellWidth + PhotoMemoDetailTagCollectionViewCell.inset.left + PhotoMemoDetailTagCollectionViewCell.inset.right,
-                                    height: dummyCell.tagLabel.height + PhotoMemoDetailTagCollectionViewCell.inset.top + PhotoMemoDetailTagCollectionViewCell.inset.bottom))
+            let size = CGSize(width: expectedCellWidth + PhotoMemoDetailTagCollectionViewCell.inset.left + PhotoMemoDetailTagCollectionViewCell.inset.right,
+                              height: dummyCell.tagLabel.height + PhotoMemoDetailTagCollectionViewCell.inset.top + PhotoMemoDetailTagCollectionViewCell.inset.bottom)
+            print("👺 \(size)")
+            cellSizes.append(size)
             
 //            // cellの期待width
 //            let expectedCellWidth = tagModel.tag.width(withConstrainedHeight: 10,
@@ -53,6 +55,12 @@ class PhotoMemoDetailTagsTableViewCell: UITableViewCell {
         layout.setup(cellSizes: cellSizes, collectionViewWidth: collectionView.width, horizontalMargin: 10, verticalMargin: 10, collectionViewInset: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
         
         collectionView.setCollectionViewLayout(layout, animated: false)
+    }
+    
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        collectionView.layoutIfNeeded()
+        cellHeight.constant = collectionView.contentSize.height
     }
 }
 
