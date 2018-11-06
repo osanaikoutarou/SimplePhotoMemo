@@ -19,6 +19,10 @@
 		1EA51AC2216D1327008E63E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC1216D1327008E63E4 /* SearchViewController.swift */; };
 		1EA51AC5216D145F008E63E4 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EA51AC4216D145F008E63E4 /* Group.storyboard */; };
 		1EA51AC7216D146B008E63E4 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51AC6216D146B008E63E4 /* GroupViewController.swift */; };
+		1EAC1AF92191564000583455 /* CGSize+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC1AF82191564000583455 /* CGSize+Utility.swift */; };
+		1EAC1AFB219156C200583455 /* CocoaColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC1AFA219156C100583455 /* CocoaColors.swift */; };
+		1EAC1AFD219157CC00583455 /* UIViewController+Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC1AFC219157CC00583455 /* UIViewController+Sizes.swift */; };
+		1EAC1AFF2191595900583455 /* UIView+AutolayoutUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC1AFE2191595900583455 /* UIView+AutolayoutUtility.swift */; };
 		1EB7B25D2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B25C2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift */; };
 		1EB7B2602177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B25E2177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift */; };
 		1EB7B26C2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */; };
@@ -121,6 +125,10 @@
 		1EA51AC1216D1327008E63E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1EA51AC4216D145F008E63E4 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
 		1EA51AC6216D146B008E63E4 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		1EAC1AF82191564000583455 /* CGSize+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Utility.swift"; sourceTree = "<group>"; };
+		1EAC1AFA219156C100583455 /* CocoaColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaColors.swift; sourceTree = "<group>"; };
+		1EAC1AFC219157CC00583455 /* UIViewController+Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Sizes.swift"; sourceTree = "<group>"; };
+		1EAC1AFE2191595900583455 /* UIView+AutolayoutUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutolayoutUtility.swift"; sourceTree = "<group>"; };
 		1EB7B25C2177959200994882 /* NormalPhotoMemoListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalPhotoMemoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EB7B25E2177999A00994882 /* PhotoMemoDetailHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EB7B26A2177A05000994882 /* PhotoMemoDetailMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMemoDetailMemoTableViewCell.swift; sourceTree = "<group>"; };
@@ -248,6 +256,7 @@
 		1E982019216D4048007194B5 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1EAC1AFA219156C100583455 /* CocoaColors.swift */,
 				1EC3C793217331430080E0AE /* CalcSizeUtility.swift */,
 				1E98201A216D405C007194B5 /* KeyboardController.swift */,
 				DA15323321707A0C0068F195 /* ShadowCreator.swift */,
@@ -312,6 +321,16 @@
 			path = Group;
 			sourceTree = "<group>";
 		};
+		1EAC1AF72191563300583455 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1EAC1AF82191564000583455 /* CGSize+Utility.swift */,
+				1EAC1AFC219157CC00583455 /* UIViewController+Sizes.swift */,
+				1EAC1AFE2191595900583455 /* UIView+AutolayoutUtility.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1EC3C77D21725F3B0080E0AE /* SlideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +344,7 @@
 		1EC3C787217318970080E0AE /* General */ = {
 			isa = PBXGroup;
 			children = (
+				1EAC1AF72191563300583455 /* Extensions */,
 				1E982019216D4048007194B5 /* Utility */,
 				1EC3C788217318A80080E0AE /* GeneralView */,
 			);
@@ -415,6 +435,7 @@
 		DAD20C5A216C4146004CB68B = {
 			isa = PBXGroup;
 			children = (
+				1EC3C787217318970080E0AE /* General */,
 				DAD20C65216C4146004CB68B /* SimplePhotoMemo */,
 				DAD20C64216C4146004CB68B /* Products */,
 				9ACB4408C03D24E4F59A8760 /* Pods */,
@@ -435,7 +456,6 @@
 			children = (
 				DAFDB66521743D6700E4DEC4 /* Debug */,
 				1EC3C78F21732C610080E0AE /* Model */,
-				1EC3C787217318970080E0AE /* General */,
 				1E982018216D403A007194B5 /* Common */,
 				1EA51AB8216D0B2B008E63E4 /* Screen */,
 				DAD20C83216CA8E0004CB68B /* Extension */,
@@ -848,6 +868,8 @@
 				DAFDB67B2175743C00E4DEC4 /* PhotoThreePhotoMemoListCollectionViewCell.swift in Sources */,
 				DAD20C7C216C9CC9004CB68B /* PhotoMemoListViewController.swift in Sources */,
 				DA15325321707EE20068F195 /* HorizontalNavigationCollectionViewCell.swift in Sources */,
+				1EAC1AFB219156C200583455 /* CocoaColors.swift in Sources */,
+				1EAC1AFD219157CC00583455 /* UIViewController+Sizes.swift in Sources */,
 				DAD20CBE216CA8E0004CB68B /* UIColor+Utility.swift in Sources */,
 				1EC3C78A217319370080E0AE /* TagCollectionViewCell.swift in Sources */,
 				DA15325A21708C580068F195 /* PhotoMemoDetailSlideViewController.swift in Sources */,
@@ -874,6 +896,7 @@
 				DAD20C69216C4146004CB68B /* ViewController.swift in Sources */,
 				1EC3C78C217321B20080E0AE /* TagsCollectionViewLayout.swift in Sources */,
 				DAD20CC3216CA8E0004CB68B /* String+.swift in Sources */,
+				1EAC1AFF2191595900583455 /* UIView+AutolayoutUtility.swift in Sources */,
 				DAFDB67D2175B3A000E4DEC4 /* PhotoMemo.swift in Sources */,
 				DAD20CCE216CA8E0004CB68B /* UIApplication+.swift in Sources */,
 				DAD20CE1216CA8E0004CB68B /* String+Utility.swift in Sources */,
@@ -885,6 +908,7 @@
 				DA15325021707EE20068F195 /* CommonTitleTableViewCell.swift in Sources */,
 				1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */,
 				DAD20CD1216CA8E0004CB68B /* UIVIew+Frame.swift in Sources */,
+				1EAC1AF92191564000583455 /* CGSize+Utility.swift in Sources */,
 				DAD20CDF216CA8E0004CB68B /* UITableView+Utility.swift in Sources */,
 				DAD20CD8216CA8E0004CB68B /* Date+Utility.swift in Sources */,
 				DAD20CD0216CA8E0004CB68B /* UIColor+.swift in Sources */,

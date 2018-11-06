@@ -12,7 +12,6 @@ class PhotoMemoDetailViewController: UIViewController {
 
     var detailSources:[PhotoMemoDetailTableViewSource] = []
     let horizontalCollectionViewLayout = UICollectionViewFlowLayout()
-    
     @IBOutlet weak var detailHorizontalCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -27,6 +26,24 @@ class PhotoMemoDetailViewController: UIViewController {
         }
 
         self.navigationController?.isNavigationBarHidden = false
+        
+        setupNavColors()
+        setupNavPosition()
+    }
+    
+    func setupNavColors() {
+//        var alpha = 1.0 - (100 - scrollView.contentOffset.y)/100.0 - 0.5
+//        alpha = min(0.9, alpha)
+//        alpha = max(0, alpha)
+        let alpha:CGFloat = 0
+        
+        let color = UIColor(white: 1, alpha: alpha)
+        let colorS = CocoaColors.NavigationBar.shadowColor.withAlphaComponent(alpha)
+        self.setNavigationBarColor(navBarColor: color, shadowColor: colorS)
+    }
+    
+    func setupNavPosition() {
+        self.view.updateConstraint(identifier: "top", value: -self.topBarAllHeight)
     }
     
     override func viewWillLayoutSubviews() {

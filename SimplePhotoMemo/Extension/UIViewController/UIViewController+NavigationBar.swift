@@ -114,5 +114,16 @@ extension UIViewController {
         let barButtonItem = UIBarButtonItem.init(customView: button)
         self.navigationItem.rightBarButtonItem = barButtonItem
     }
+    
+    //MARK: transparent navigationbar
+    
+    func setNavigationBarColor(navBarColor:UIColor, shadowColor:UIColor) {
+        let navImg = UIImage(color: navBarColor, size: CGSize.pxSize())
+        let shadowImg = UIImage(color: shadowColor, size: CGSize.pxSize())
+        self.navigationController?.navigationBar.setBackgroundImage(navImg, for: .default)
+        self.navigationController?.navigationBar.shadowImage = shadowImg
+        self.navigationController?.navigationBar.backgroundColor = .clear
+    }
+
 
 }

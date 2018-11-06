@@ -15,6 +15,8 @@ class PhotoMemoDetailMemoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        textView.isEditable = false
     }
     
 }
