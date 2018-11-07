@@ -17,6 +17,7 @@ class PhotoMemoDetailHorizontalCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        photoMemoDetailTableView.contentInset = UIEdgeInsets(top: -100, left: 0, bottom: 0, right: 0)
     }
     
     func setup(source:PhotoMemoDetailTableViewSource) {
