@@ -17,5 +17,14 @@ class PhotoMemoDetailPhotoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         photoImageView.image = UIImage(named: "huukei1")
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedPhotoImageView))
+        photoImageView.addGestureRecognizer(tap)
     }
+    
+    @objc
+    func tappedPhotoImageView(sender:UIGestureRecognizer) {
+        MyNotificationCenter.shared.post(type: .showImageViewer, sender: nil)
+    }
+    
 }

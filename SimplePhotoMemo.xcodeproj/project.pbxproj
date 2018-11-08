@@ -57,6 +57,7 @@
 		DA2C950821916F8B0086C1C2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C950721916F8B0086C1C2 /* Theme.swift */; };
 		DA2C950A21916FA80086C1C2 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2C950921916FA80086C1C2 /* Theme.xcassets */; };
 		DA4299A52179715B00394E65 /* ToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4299A42179715B00394E65 /* ToggleButtonView.swift */; };
+		DA760B702194005600BB9637 /* NotificationCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA760B6F2194005600BB9637 /* NotificationCenterController.swift */; };
 		DAD20C67216C4146004CB68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C66216C4146004CB68B /* AppDelegate.swift */; };
 		DAD20C69216C4146004CB68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD20C68216C4146004CB68B /* ViewController.swift */; };
 		DAD20C6C216C4147004CB68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD20C6A216C4147004CB68B /* Main.storyboard */; };
@@ -166,6 +167,7 @@
 		DA2C950721916F8B0086C1C2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DA2C950921916FA80086C1C2 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		DA4299A42179715B00394E65 /* ToggleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonView.swift; sourceTree = "<group>"; };
+		DA760B6F2194005600BB9637 /* NotificationCenterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterController.swift; sourceTree = "<group>"; };
 		DAD20C63216C4146004CB68B /* SimplePhotoMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePhotoMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD20C66216C4146004CB68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD20C68216C4146004CB68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				1EC3C78B217321B20080E0AE /* TagsCollectionViewLayout.swift */,
 				DA15323721707EE10068F195 /* CommonView */,
+				DA760B6F2194005600BB9637 /* NotificationCenterController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -808,12 +811,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SimplePhotoMemo/Pods-SimplePhotoMemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMScrollingNavbar/AMScrollingNavbar.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageViewer/ImageViewer.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMScrollingNavbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageViewer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -922,6 +927,7 @@
 				1E982015216D392F007194B5 /* AddPhotoMemoViewController.swift in Sources */,
 				DAD20CC8216CA8E0004CB68B /* StringTo.swift in Sources */,
 				DA15325021707EE20068F195 /* CommonTitleTableViewCell.swift in Sources */,
+				DA760B702194005600BB9637 /* NotificationCenterController.swift in Sources */,
 				1E98201B216D405D007194B5 /* KeyboardController.swift in Sources */,
 				DAD20CD1216CA8E0004CB68B /* UIVIew+Frame.swift in Sources */,
 				1EAC1AF92191564000583455 /* CGSize+Utility.swift in Sources */,

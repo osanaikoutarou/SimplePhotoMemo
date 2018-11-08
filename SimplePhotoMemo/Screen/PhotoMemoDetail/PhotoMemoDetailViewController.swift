@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageViewer
 
 class PhotoMemoDetailViewController: UIViewController {
 
@@ -63,6 +64,19 @@ class PhotoMemoDetailViewController: UIViewController {
         
         detailHorizontalCollectionView.setCollectionViewLayout(horizontalCollectionViewLayout, animated: false)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MyNotificationCenter.shared.add(observer: .showImageViewer) { (sender:Any?) in
+            print("きたよ！🐭")
+            // Show the ImageViewer with with the first item
+            self.presentImageGallery(GalleryViewController(startIndex: 0, itemsDataSource: self))
+        }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        MyNotificationCenter.shared.remove(observer: .showImageViewer)
+    }
         
 }
 
@@ -81,3 +95,15 @@ extension PhotoMemoDetailViewController: UICollectionViewDelegate,UICollectionVi
     
 }
 
+
+// The GalleryItemsDataSource provides the items to show
+extension PhotoMemoDetailViewController: GalleryItemsDataSource {
+    func itemCount() -> Int {
+        return 1
+    }
+    
+    func provideGalleryItem(_ index: Int) -> GalleryItem {
+        let item:GalleryItem = GalleryItem.image { $0(UIImage(named: "huukei1")) }
+        return item
+    }
+}

@@ -6,5 +6,6 @@ target 'SimplePhotoMemo' do
     	pod 'SnapKit', '~> 4.0.0'
 	pod 'AMScrollingNavbar', '< 5.0.0'
 	pod 'SlideMenuControllerSwift'
+	pod 'ImageViewer'
 end
 
