@@ -11,6 +11,7 @@ import UIKit
 class PhotoMemoDetailPhotoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageViewTop: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
