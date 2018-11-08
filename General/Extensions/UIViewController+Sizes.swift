@@ -21,6 +21,9 @@ extension UIViewController {
         return (window?.safeAreaInsets.top)!
     }
     var topBarAllHeight: CGFloat {
+        return navigationBarHeight + statusBarHeight
+    }
+    var topBarAndSafeAreaHeight: CGFloat {
         return navigationBarHeight + statusBarHeight + safeareaTop
     }
 }

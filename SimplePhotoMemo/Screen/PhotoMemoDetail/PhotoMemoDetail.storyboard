@@ -60,7 +60,7 @@
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="6Ni-XT-eJb" firstAttribute="leading" secondItem="8CA-MQ-Qlb" secondAttribute="leading" id="38g-fA-DRb"/>
-                                                                    <constraint firstItem="6Ni-XT-eJb" firstAttribute="top" secondItem="8CA-MQ-Qlb" secondAttribute="top" constant="100" id="KDG-NK-hRB"/>
+                                                                    <constraint firstItem="6Ni-XT-eJb" firstAttribute="top" secondItem="8CA-MQ-Qlb" secondAttribute="top" identifier="top" id="KDG-NK-hRB"/>
                                                                     <constraint firstAttribute="trailing" secondItem="6Ni-XT-eJb" secondAttribute="trailing" id="KSD-aT-wx5"/>
                                                                     <constraint firstAttribute="bottom" secondItem="6Ni-XT-eJb" secondAttribute="bottom" id="Ox2-tj-fOr"/>
                                                                 </constraints>
@@ -68,6 +68,7 @@
                                                             <viewLayoutGuide key="safeArea" id="Pa2-Go-7UV"/>
                                                             <connections>
                                                                 <outlet property="photoImageView" destination="6Ni-XT-eJb" id="AlG-v8-Jzb"/>
+                                                                <outlet property="photoImageViewTop" destination="KDG-NK-hRB" id="ig1-2K-wWC"/>
                                                             </connections>
                                                         </tableViewCell>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoMemoDetailTagsTableViewCell" rowHeight="204" id="W5Y-3U-54n" customClass="PhotoMemoDetailTagsTableViewCell" customModule="SimplePhotoMemo" customModuleProvider="target">

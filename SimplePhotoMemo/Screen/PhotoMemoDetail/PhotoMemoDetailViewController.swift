@@ -43,7 +43,7 @@ class PhotoMemoDetailViewController: UIViewController {
     }
     
     func setupNavPosition() {
-        self.view.updateConstraint(identifier: "top", value: -self.topBarAllHeight)
+        self.view.updateConstraint(identifier: "top", value: -self.navigationBarHeight)
     }
     
     override func viewWillLayoutSubviews() {

@@ -17,7 +17,7 @@ class PhotoMemoDetailHorizontalCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        photoMemoDetailTableView.contentInset = UIEdgeInsets(top: -100, left: 0, bottom: 0, right: 0)
+        photoMemoDetailTableView.contentInsetAdjustmentBehavior = .never
     }
     
     func setup(source:PhotoMemoDetailTableViewSource) {
@@ -27,7 +27,7 @@ class PhotoMemoDetailHorizontalCollectionViewCell: UICollectionViewCell {
         photoMemoDetailTableView.estimatedRowHeight = 50
 
         photoMemoDetailTableView.delegate = source
-        photoMemoDetailTableView.dataSource = source        
+        photoMemoDetailTableView.dataSource = source
     }
     
 }
@@ -88,6 +88,15 @@ class PhotoMemoDetailTableViewSource:NSObject, UITableViewDelegate,UITableViewDa
             return cell
         }
         
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView is UITableView {
+            if let cell = (scrollView as! UITableView).cellForRow(at: IndexPath(row: 0, section: 0)) as? PhotoMemoDetailPhotoTableViewCell {
+                print("😥  \(scrollView.contentOffset.y)")
+                cell.photoImageViewTop.constant = scrollView.contentOffset.y
+            }
+        }
     }
     
     
